@@ -1,0 +1,2361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#C4912F">
+
+<!-- ============================================================
+     LARISSA SOUZA — ESTÉTICA INTEGRATIVA
+     Site one-page · HTML + CSS + JS em um único arquivo
+     Estrutura: 1) variáveis  2) CSS  3) markup  4) JS
+     ============================================================ -->
+
+<title>Larissa Souza | Estética Integrativa — Aliado com o seu bem estar</title>
+<meta name="description" content="Clínica de estética integrativa em São Paulo: estética corporal, facial e terapias de relaxamento. Massagens, drenagem, criolipólise, limpeza de pele e kits de emagrecimento. Agende pelo WhatsApp.">
+<meta name="keywords" content="estética integrativa, massagem relaxante, drenagem linfática, criolipólise, limpeza de pele, estética corporal, spa, Larissa Souza">
+<meta name="author" content="Larissa Souza Estética Integrativa">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.larissasouzaestetica.com.br/">
+
+<!-- Open Graph / redes sociais -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Larissa Souza — Estética Integrativa">
+<meta property="og:title" content="Larissa Souza | Estética Integrativa">
+<meta property="og:description" content="Corpo, mente e bem-estar em um só lugar. Estética corporal, facial e terapias integrativas com atendimento acolhedor.">
+<meta property="og:url" content="https://www.larissasouzaestetica.com.br/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:image:alt" content="Ambiente de spa com toalhas e iluminação suave">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Larissa Souza | Estética Integrativa">
+<meta name="twitter:description" content="Aliado com o seu bem estar — estética corporal, facial e terapias.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80">
+
+<!-- Fontes: Great Vibes (cursiva) · Cormorant Garamond (títulos) · Inter (texto) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Favicon simples (letra L em dourado) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FBF1DA'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='38' fill='%23C4912F' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+
+<!-- SEO local: dados estruturados (BeautySalon) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Larissa Souza Estética Integrativa",
+  "slogan": "Aliado com o seu bem estar",
+  "description": "Clínica de estética integrativa com procedimentos corporais, faciais e terapias de relaxamento.",
+  "url": "https://www.larissasouzaestetica.com.br/",
+  "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80",
+  "telephone": "+55-11-99999-9999",
+  "priceRange": "$$",
+  "currenciesAccepted": "BRL",
+  "paymentAccepted": "Pix, dinheiro, cartão de crédito e débito",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua das Acácias, 128 — Sala 4",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "postalCode": "04567-000",
+    "addressCountry": "BR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": -23.5859, "longitude": -46.6823 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/larissasouza.estetica",
+    "https://www.facebook.com/larissasouzaestetica"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Procedimentos",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Massagem Relaxante" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drenagem Linfática" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpeza de Pele" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criolipólise" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SpaDetox" } }
+    ]
+  }
+}
+</script>
+
+<style>
+/* ============================================================
+   1) VARIÁVEIS FÁCEIS DE EDITAR
+   ============================================================ */
+:root{
+  /* Paleta da marca */
+  --dourado:#C4912F;
+  --dourado-claro:#DDB35A;
+  --dourado-escuro:#9C7023;
+  --verde:#6B8E5F;
+  --verde-escuro:#4F6B47;
+  --creme:#FBF1DA;
+  --creme-claro:#FDF8EC;
+  --grafite:#4A4A4A;
+  --marrom:#6B5340;
+  --marrom-suave:#8A7461;
+
+  /* Tipografia */
+  --fonte-script:"Great Vibes", cursive;
+  --fonte-titulo:"Cormorant Garamond", Georgia, serif;
+  --fonte-texto:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Medidas */
+  --largura:1140px;
+  --raio:22px;
+  --sombra-suave:0 18px 50px -22px rgba(74,58,38,.38);
+  --sombra-card:0 10px 30px -18px rgba(74,58,38,.45);
+  --transicao:cubic-bezier(.22,.61,.36,1);
+  --header-h:70px;
+}
+
+/* ============================================================
+   2) RESET E BASE
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:var(--fonte-texto);
+  font-weight:400;
+  font-size:16px;
+  line-height:1.7;
+  color:var(--grafite);
+  background:var(--creme-claro);
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+h1,h2,h3,h4{font-family:var(--fonte-titulo);font-weight:500;line-height:1.15;color:var(--marrom);margin:0 0 .5em}
+p{margin:0 0 1em}
+ul{margin:0;padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--verde);outline-offset:3px;border-radius:6px}
+.visually-hidden{
+  position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;
+}
+.skip-link{
+  position:absolute;left:16px;top:-70px;z-index:200;
+  background:var(--grafite);color:var(--creme);padding:12px 20px;border-radius:0 0 12px 12px;
+  transition:top .25s var(--transicao);
+}
+.skip-link:focus{top:0}
+
+/* ============================================================
+   3) UTILITÁRIOS DE LAYOUT
+   ============================================================ */
+.container{width:100%;max-width:var(--largura);margin-inline:auto;padding-inline:22px}
+.secao{padding:74px 0;position:relative;scroll-margin-top:var(--header-h)}
+.secao--creme{background:var(--creme)}
+.secao--branca{background:var(--creme-claro)}
+.secao--verde{background:var(--verde);color:#F4F1E6}
+.secao--verde h2,.secao--verde h3{color:var(--creme)}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--fonte-texto);font-size:.72rem;font-weight:600;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--dourado-escuro);
+  margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor;opacity:.6}
+.secao--verde .eyebrow{color:var(--dourado-claro)}
+.titulo-secao{
+  font-family:var(--fonte-titulo);font-size:clamp(1.95rem,6.2vw,3rem);
+  font-weight:500;letter-spacing:-.01em;color:var(--marrom);
+}
+.titulo-secao em{font-family:var(--fonte-script);font-style:normal;font-size:1.2em;color:var(--dourado);display:inline-block;line-height:.8}
+.subtitulo{max-width:56ch;color:var(--marrom-suave);font-size:.98rem;line-height:1.75}
+.secao--verde .subtitulo{color:#EDEAD9}
+.cabecalho-secao{margin-bottom:34px;position:relative;z-index:2}
+
+/* Ornamentos: linhas pontilhadas e círculos orgânicos */
+.ornamento-pontos{
+  width:1px;height:78px;margin:0 auto 18px;
+  background-image:linear-gradient(var(--dourado) 45%, transparent 0);
+  background-size:1px 10px;background-repeat:repeat-y;opacity:.55;
+}
+.circulo-org{
+  position:absolute;border-radius:48% 52% 46% 54% / 52% 46% 54% 48%;
+  pointer-events:none;z-index:0;
+}
+
+/* ============================================================
+   4) BOTÕES
+   ============================================================ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:15px 28px;border-radius:999px;
+  font-family:var(--fonte-texto);font-size:.9rem;font-weight:600;letter-spacing:.02em;
+  min-height:50px;transition:transform .3s var(--transicao),box-shadow .3s var(--transicao),background-color .3s,color .3s,border-color .3s;
+  border:1px solid transparent;text-align:center;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 26px -16px rgba(0,0,0,.5)}
+.btn--primario{background:var(--grafite);color:var(--creme)}
+.btn--primario:hover{background:#3A3A3A}
+.btn--dourado{background:var(--dourado);color:#2E2415}
+.btn--dourado:hover{background:var(--dourado-claro)}
+.btn--contorno{border-color:rgba(74,74,74,.35);color:var(--marrom)}
+.btn--contorno:hover{border-color:var(--dourado);background:rgba(196,145,47,.09)}
+.btn--claro{background:var(--creme);color:var(--marrom)}
+.btn--whats{background:#2E7D5B;color:#fff}
+.btn--whats:hover{background:#276B4E}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* ============================================================
+   5) HEADER / NAVEGAÇÃO
+   ============================================================ */
+.header{
+  position:fixed;inset:0 0 auto 0;z-index:100;
+  height:var(--header-h);display:flex;align-items:center;
+  background:rgba(251,241,218,.82);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(196,145,47,.18);
+  transition:background .35s var(--transicao),box-shadow .35s var(--transicao),height .35s;
+}
+.header.is-scrolled{background:rgba(253,248,236,.96);box-shadow:0 6px 24px -18px rgba(0,0,0,.5)}
+.header__inner{width:100%;max-width:var(--largura);margin-inline:auto;padding-inline:22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.marca{display:flex;flex-direction:column;line-height:1;gap:2px}
+.marca__nome{font-family:var(--fonte-script);font-size:1.58rem;color:var(--marrom);letter-spacing:.01em}
+.marca__sub{font-family:var(--fonte-texto);font-size:.55rem;letter-spacing:.34em;text-transform:uppercase;color:var(--dourado-escuro);font-weight:600}
+.nav{display:none}
+.nav__lista{display:flex;align-items:center;gap:26px}
+.nav__link{
+  position:relative;font-size:.82rem;font-weight:500;letter-spacing:.03em;color:var(--marrom);
+  padding:6px 0;transition:color .25s;
+}
+.nav__link::after{
+  content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;
+  background:var(--dourado);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--transicao);
+}
+.nav__link:hover,.nav__link.ativo{color:var(--dourado-escuro)}
+.nav__link:hover::after,.nav__link.ativo::after{transform:scaleX(1)}
+.header__cta{display:none}
+
+/* Botão hambúrguer */
+.menu-btn{
+  width:46px;height:46px;display:grid;place-items:center;border-radius:50%;
+  border:1px solid rgba(74,74,74,.22);background:rgba(255,255,255,.4);
+}
+.menu-btn span{display:block;width:20px;height:1.6px;background:var(--marrom);border-radius:2px;transition:transform .3s var(--transicao),opacity .2s}
+.menu-btn span+span{margin-top:5px}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(6.6px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.6px) rotate(-45deg)}
+
+/* Painel mobile */
+.menu-mobile{
+  position:fixed;inset:var(--header-h) 0 auto 0;z-index:99;
+  background:var(--creme);border-bottom:1px solid rgba(196,145,47,.25);
+  padding:18px 22px 30px;box-shadow:var(--sombra-suave);
+  display:grid;gap:4px;
+  transform:translateY(-12px);opacity:0;visibility:hidden;
+  transition:opacity .3s var(--transicao),transform .3s var(--transicao),visibility .3s;
+  max-height:calc(100svh - var(--header-h));overflow-y:auto;
+}
+.menu-mobile.aberto{transform:translateY(0);opacity:1;visibility:visible}
+.menu-mobile a{
+  font-family:var(--fonte-titulo);font-size:1.35rem;color:var(--marrom);
+  padding:11px 4px;border-bottom:1px dotted rgba(196,145,47,.4);
+}
+.menu-mobile .btn{margin-top:16px}
+
+/* ============================================================
+   6) HERO
+   ============================================================ */
+.hero{
+  position:relative;overflow:hidden;
+  padding:calc(var(--header-h) + 46px) 0 0;
+  background:
+    radial-gradient(120% 80% at 78% 8%, rgba(221,179,90,.55) 0%, rgba(221,179,90,0) 55%),
+    linear-gradient(168deg, #D6A445 0%, #C4912F 46%, #B8872C 100%);
+  color:var(--marrom);
+  isolation:isolate;
+}
+.hero__textura{
+  position:absolute;inset:0;z-index:0;opacity:.5;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.5) .6px, transparent .6px);
+  background-size:22px 22px;
+  mask-image:linear-gradient(to bottom, #000 0%, transparent 65%);
+  -webkit-mask-image:linear-gradient(to bottom, #000 0%, transparent 65%);
+}
+/* Círculo verde no canto (referência do material da clínica) */
+.hero__circulo-verde{
+  position:absolute;z-index:0;width:min(62vw,340px);aspect-ratio:1;border-radius:50%;
+  background:var(--verde);right:-16%;top:36%;opacity:.95;
+}
+.hero__linhas{
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(90deg, rgba(74,58,38,.18) 50%, transparent 0);
+  background-size:9px 1px;background-repeat:repeat-x;
+  background-position:0 28%;
+  opacity:.6;
+  mask-image:linear-gradient(to bottom, transparent 0, #000 12%, #000 42%, transparent 52%);
+  -webkit-mask-image:linear-gradient(to bottom, transparent 0, #000 12%, #000 42%, transparent 52%);
+}
+.hero__inner{position:relative;z-index:2;text-align:center}
+.hero__card{
+  position:relative;
+  padding:26px 22px 22px;
+  margin:0 auto;
+  max-width:430px;
+  background:rgba(251,241,218,.10);
+  border:1px solid rgba(251,241,218,.35);
+  border-radius:6px;
+  backdrop-filter:blur(2px);
+}
+/* Silhuetas line art em marca d'água no card */
+.hero__silhueta{
+  position:absolute;inset:0;width:100%;height:100%;opacity:.22;
+  pointer-events:none;color:#5A4523;
+}
+.hero__card > *:not(.hero__silhueta){position:relative}
+.hero__nome{
+  font-family:var(--fonte-script);font-weight:400;
+  font-size:clamp(2.9rem,13vw,4.4rem);line-height:.95;
+  color:#3E2F16;margin:0;
+  text-shadow:0 1px 0 rgba(255,255,255,.18);
+}
+.hero__tag{
+  display:block;font-family:var(--fonte-texto);font-weight:600;
+  font-size:.62rem;letter-spacing:.38em;text-transform:uppercase;
+  color:#4A3A1D;margin-top:10px;
+}
+.hero__slogan{
+  font-family:var(--fonte-titulo);font-style:italic;font-size:1.02rem;
+  letter-spacing:.06em;color:#3E2F16;margin:16px 0 0;padding-top:14px;
+  border-top:1px solid rgba(62,47,22,.18);
+  max-width:250px;margin-inline:auto;
+}
+.hero__sociais{display:flex;justify-content:center;gap:26px;margin-top:22px}
+.hero__sociais a{
+  width:42px;height:42px;display:grid;place-items:center;border-radius:50%;
+  border:1px solid rgba(62,47,22,.35);color:#3E2F16;
+  transition:background .3s,color .3s,transform .3s;
+}
+.hero__sociais a:hover{background:#3E2F16;color:var(--creme);transform:translateY(-2px)}
+.hero__sociais svg{width:18px;height:18px}
+
+/* Círculo creme orgânico que "abraça" a chamada */
+.hero__painel{
+  position:relative;z-index:1;margin-top:34px;
+  background:var(--creme);
+  border-radius:50% 50% 0 0 / 22% 22% 0 0;
+  padding:44px 22px 58px;
+  box-shadow:0 -18px 40px -30px rgba(60,40,10,.6);
+  overflow:hidden;
+}
+.hero__painel::before{
+  content:"";position:absolute;left:50%;top:26px;transform:translateX(-50%);
+  width:1px;height:44px;
+  background-image:linear-gradient(var(--dourado) 45%, transparent 0);
+  background-size:1px 9px;background-repeat:repeat-y;opacity:.6;
+}
+.hero__art{
+  position:absolute;bottom:0;left:50%;transform:translateX(-50%);
+  width:min(560px,130%);opacity:.30;color:var(--dourado);pointer-events:none;
+}
+.hero__conteudo{position:relative;z-index:2;text-align:center;max-width:420px;margin-inline:auto}
+.hero__titulo{
+  font-family:var(--fonte-titulo);font-size:clamp(1.5rem,5.6vw,2.1rem);
+  line-height:1.25;color:var(--marrom);margin:0 0 12px;font-weight:500;
+}
+.hero__titulo em{font-family:var(--fonte-script);font-style:normal;color:var(--dourado);font-size:1.18em}
+.hero__texto{font-size:.9rem;color:var(--marrom-suave);line-height:1.65;margin-bottom:24px}
+.hero__botoes{display:grid;gap:11px}
+.hero__botoes .btn{width:100%}
+.hero__rodape{
+  position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:8px 22px;
+  justify-content:center;margin-top:30px;padding-top:18px;
+  border-top:1px dotted rgba(196,145,47,.5);
+  font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--marrom-suave);
+}
+.hero__rodape span{display:inline-flex;align-items:center;gap:7px}
+.hero__rodape span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--verde)}
+
+/* ============================================================
+   7) SOBRE
+   ============================================================ */
+.sobre__grid{display:grid;gap:34px;align-items:center}
+.sobre__figura{position:relative;max-width:400px;margin-inline:auto;width:100%}
+.sobre__figura img{
+  width:100%;aspect-ratio:4/5;object-fit:cover;
+  border-radius:180px 180px 24px 24px;
+  box-shadow:var(--sombra-suave);
+}
+.sobre__moldura{
+  position:absolute;inset:-12px -12px 34px 26px;z-index:-1;
+  border:1px solid rgba(196,145,47,.5);border-radius:190px 190px 24px 24px;
+}
+.sobre__selo{
+  position:absolute;right:-4px;bottom:6px;
+  background:var(--verde);color:var(--creme);
+  border-radius:50%;width:104px;height:104px;
+  display:grid;place-content:center;text-align:center;
+  font-family:var(--fonte-titulo);line-height:1.1;
+  box-shadow:var(--sombra-card);padding:6px;
+}
+.sobre__selo strong{display:block;font-size:1.55rem;font-family:var(--fonte-script);font-weight:400}
+.sobre__selo span{font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;font-family:var(--fonte-texto)}
+.sobre__lista{display:grid;gap:14px;margin:22px 0 0}
+.sobre__lista li{display:flex;gap:12px;align-items:flex-start;font-size:.9rem;color:var(--marrom)}
+.sobre__lista svg{flex:none;width:20px;height:20px;margin-top:3px;color:var(--verde)}
+.assinatura{
+  font-family:var(--fonte-script);font-size:1.9rem;color:var(--dourado-escuro);
+  margin-top:24px;display:block;
+}
+.assinatura small{
+  display:block;font-family:var(--fonte-texto);font-size:.62rem;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--marrom-suave);margin-top:4px;
+}
+/* ============================================================
+   8) CATÁLOGO DE PROCEDIMENTOS
+   ============================================================ */
+.catalogo{background:var(--creme-claro);position:relative;overflow:hidden}
+.catalogo .circulo-org{width:min(70vw,420px);aspect-ratio:1;background:rgba(107,142,95,.09);top:6%;right:-24%}
+.tabs{
+  display:flex;gap:8px;overflow-x:auto;padding:4px 2px 12px;margin-bottom:22px;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch;
+}
+.tabs::-webkit-scrollbar{display:none}
+.tab{
+  flex:none;padding:11px 18px;border-radius:999px;min-height:44px;
+  border:1px solid rgba(107,142,95,.3);background:rgba(255,255,255,.6);
+  font-size:.8rem;font-weight:600;letter-spacing:.02em;color:var(--marrom);
+  transition:background .3s,color .3s,border-color .3s,transform .3s;
+  white-space:nowrap;
+}
+.tab:hover{border-color:var(--verde);transform:translateY(-1px)}
+.tab[aria-selected="true"]{background:var(--verde);border-color:var(--verde);color:#fff}
+.catalogo__meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center;margin-bottom:18px}
+.catalogo__contagem{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--marrom-suave)}
+.catalogo__dica{font-size:.75rem;color:var(--marrom-suave);display:inline-flex;gap:6px;align-items:center}
+.catalogo__dica svg{width:14px;height:14px;color:var(--dourado)}
+.cards{display:grid;gap:14px}
+.card-proc{
+  position:relative;background:#fff;border:1px solid rgba(196,145,47,.18);
+  border-radius:18px;overflow:hidden;box-shadow:var(--sombra-card);
+  transition:border-color .3s,box-shadow .3s,transform .3s var(--transicao);
+  animation:cardIn .45s var(--transicao) both;
+}
+@keyframes cardIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.card-proc:hover{border-color:rgba(196,145,47,.5);transform:translateY(-2px)}
+.card-proc.aberto{border-color:var(--dourado);box-shadow:0 20px 44px -24px rgba(107,84,64,.6)}
+.card-proc__topo{
+  width:100%;display:flex;align-items:center;gap:14px;text-align:left;
+  padding:18px 18px;min-height:62px;
+}
+.card-proc__num{
+  flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(251,241,218,.9);color:var(--dourado-escuro);
+  font-family:var(--fonte-titulo);font-size:.95rem;font-weight:600;
+}
+.card-proc__nome{
+  font-family:var(--fonte-titulo);font-size:1.22rem;font-weight:600;color:var(--marrom);
+  line-height:1.2;flex:1;margin:0;
+}
+.card-proc__chev{flex:none;width:22px;height:22px;color:var(--dourado);transition:transform .35s var(--transicao)}
+.card-proc.aberto .card-proc__chev{transform:rotate(180deg)}
+.card-proc__corpo{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--transicao)}
+.card-proc.aberto .card-proc__corpo{grid-template-rows:1fr}
+.card-proc__corpo > div{overflow:hidden}
+.card-proc__inner{padding:0 18px 20px;border-top:1px dotted rgba(196,145,47,.4);margin:0 0 0 0;padding-top:16px}
+.card-proc__desc{font-size:.88rem;color:var(--marrom-suave);margin-bottom:12px}
+.card-proc__tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tag{
+  font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--verde-escuro);
+  background:rgba(107,142,95,.12);border-radius:999px;padding:4px 10px;
+}
+.card-proc__info{display:flex;gap:8px 18px;flex-wrap:wrap;font-size:.75rem;color:var(--marrom-suave);margin-bottom:16px}
+.card-proc__info span{display:inline-flex;align-items:center;gap:6px}
+.card-proc__info svg{width:14px;height:14px;color:var(--dourado)}
+.card-proc__btn{width:100%;font-size:.82rem;min-height:46px;padding:12px 18px}
+.catalogo__aviso{font-size:.72rem;color:var(--marrom-suave);text-align:center;margin-top:22px;line-height:1.6}
+
+/* ============================================================
+   9) QUIZ — QUAL TRATAMENTO É IDEAL PARA MIM
+   ============================================================ */
+.quiz{background:linear-gradient(180deg,var(--creme) 0%,#F6E9CB 100%);position:relative;overflow:hidden}
+.quiz .circulo-org{width:320px;aspect-ratio:1;background:rgba(196,145,47,.14);left:-140px;bottom:-80px}
+.quiz__box{
+  position:relative;z-index:1;background:rgba(255,255,255,.75);border:1px solid rgba(196,145,47,.3);
+  border-radius:var(--raio);padding:24px 20px 26px;box-shadow:var(--sombra-suave);
+  backdrop-filter:blur(6px);max-width:640px;margin-inline:auto;
+}
+.quiz__progresso{display:flex;gap:6px;margin-bottom:20px}
+.quiz__bolinha{flex:1;height:4px;border-radius:99px;background:rgba(107,142,95,.2);overflow:hidden}
+.quiz__bolinha i{display:block;height:100%;width:0;background:var(--dourado);border-radius:99px;transition:width .45s var(--transicao)}
+.quiz__bolinha.feita i{width:100%}
+.quiz__bolinha.atual i{width:50%}
+.quiz__passo{display:none;animation:fadeUp .4s var(--transicao) both}
+.quiz__passo.ativo{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.quiz__etapa{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dourado-escuro);font-weight:600}
+.quiz__pergunta{font-family:var(--fonte-titulo);font-size:1.45rem;color:var(--marrom);margin:6px 0 16px;line-height:1.25}
+.quiz__opcoes{display:grid;gap:9px}
+.quiz__opcao{
+  display:flex;align-items:center;gap:12px;width:100%;text-align:left;
+  padding:13px 15px;border-radius:14px;border:1px solid rgba(107,142,95,.28);
+  background:#fff;font-size:.88rem;color:var(--marrom);min-height:52px;
+  transition:border-color .25s,background .25s,transform .25s;
+}
+.quiz__opcao:hover{border-color:var(--dourado);background:#FFFDF6;transform:translateX(2px)}
+.quiz__opcao .ic{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(251,241,218,.9);color:var(--dourado-escuro);font-size:1rem}
+.quiz__opcao strong{display:block;font-weight:600;font-size:.9rem;line-height:1.3}
+.quiz__opcao small{display:block;font-size:.74rem;color:var(--marrom-suave);line-height:1.35;margin-top:2px}
+.quiz__voltar{
+  margin-top:16px;font-size:.78rem;color:var(--marrom-suave);text-decoration:underline;
+  text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center;
+}
+.quiz__resultado{display:none}
+.quiz__resultado.ativo{display:block;animation:fadeUp .45s var(--transicao) both}
+.quiz__selo{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--verde-escuro);font-weight:600}
+.quiz__sugestoes{display:grid;gap:9px;margin:14px 0 18px}
+.quiz__sugestao{
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+  padding:12px 15px;border-radius:12px;background:rgba(251,241,218,.85);
+  border-left:3px solid var(--dourado);font-size:.88rem;color:var(--marrom);
+}
+.quiz__sugestao span:last-child{font-size:.72rem;color:var(--marrom-suave);white-space:nowrap}
+.quiz__acoes{display:grid;gap:9px}
+.quiz__reiniciar{margin-top:10px;font-size:.75rem;color:var(--marrom-suave);text-decoration:underline;text-underline-offset:3px;min-height:40px}
+
+/* ============================================================
+   10) KITS DE EMAGRECIMENTO
+   ============================================================ */
+.kits{background:var(--verde);color:#F2EFE2;position:relative;overflow:hidden}
+.kits .circulo-org{width:380px;aspect-ratio:1;background:rgba(251,241,218,.07);right:-130px;top:-90px}
+.kits__grid{display:grid;gap:18px;position:relative;z-index:1}
+.kit{
+  background:rgba(251,241,218,.97);color:var(--grafite);border-radius:var(--raio);
+  padding:24px 22px 26px;position:relative;display:flex;flex-direction:column;
+  box-shadow:var(--sombra-suave);border:1px solid rgba(196,145,47,.25);
+  transition:transform .35s var(--transicao),box-shadow .35s;
+}
+.kit:hover{transform:translateY(-4px)}
+.kit--destaque{background:#FFFDF6;border:2px solid var(--dourado)}
+.kit__fita{
+  position:absolute;top:16px;right:-6px;background:var(--dourado);color:#2E2415;
+  font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  padding:5px 14px;border-radius:4px 0 0 4px;
+}
+.kit__nome{font-family:var(--fonte-script);font-size:2.1rem;color:var(--dourado-escuro);line-height:1;margin-bottom:4px}
+.kit__desc{font-size:.83rem;color:var(--marrom-suave);margin-bottom:16px;line-height:1.6}
+.kit__lista{display:grid;gap:9px;margin-bottom:20px;flex:1}
+.kit__lista li{display:flex;gap:9px;font-size:.84rem;color:var(--marrom);line-height:1.45}
+.kit__lista svg{flex:none;width:16px;height:16px;margin-top:3px;color:var(--verde)}
+.kit__preco{font-size:.72rem;color:var(--marrom-suave);margin-bottom:12px;letter-spacing:.04em}
+.kit__preco strong{font-family:var(--fonte-titulo);font-size:1.4rem;color:var(--marrom);letter-spacing:0;display:block;font-weight:600}
+.kit .btn{width:100%;font-size:.82rem;min-height:46px;padding:12px 16px}
+
+/* ============================================================
+   11) ANTES E DEPOIS (comparador)
+   ============================================================ */
+.comparador{background:var(--creme-claro)}
+.comparador__box{
+  position:relative;max-width:640px;margin-inline:auto;border-radius:var(--raio);
+  overflow:hidden;box-shadow:var(--sombra-suave);aspect-ratio:4/3;user-select:none;
+  border:1px solid rgba(196,145,47,.3);background:var(--creme);
+}
+.comparador__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.comparador__depois{clip-path:inset(0 0 0 50%)}
+.comparador__antes::after{
+  content:"Antes";position:absolute;left:12px;top:12px;z-index:3;
+  background:rgba(74,74,74,.8);color:#fff;font-size:.64rem;letter-spacing:.16em;
+  text-transform:uppercase;padding:5px 11px;border-radius:99px;
+}
+.comparador__depois::after{
+  content:"Depois";position:absolute;right:12px;top:12px;z-index:3;
+  background:rgba(107,142,95,.92);color:#fff;font-size:.64rem;letter-spacing:.16em;
+  text-transform:uppercase;padding:5px 11px;border-radius:99px;
+}
+.comparador__alca{
+  position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;z-index:4;
+  transform:translateX(-1px);box-shadow:0 0 12px rgba(0,0,0,.35);pointer-events:none;
+}
+.comparador__alca::after{
+  content:"⇄";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:46px;height:46px;border-radius:50%;background:#fff;color:var(--marrom);
+  display:grid;place-items:center;font-size:1.15rem;box-shadow:0 4px 16px rgba(0,0,0,.25);
+}
+.comparador__range{
+  position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;
+  cursor:ew-resize;z-index:5;-webkit-appearance:none;appearance:none;background:transparent;
+}
+.comparador__range::-webkit-slider-thumb{-webkit-appearance:none;width:48px;height:100%;cursor:ew-resize}
+.comparador__range::-moz-range-thumb{width:48px;height:100%;border:0;background:transparent;cursor:ew-resize}
+.comparador__legenda{font-size:.72rem;color:var(--marrom-suave);text-align:center;margin-top:14px;line-height:1.6}
+.comparador__legenda strong{color:var(--marrom)}
+
+/* ============================================================
+   12) CARDÁPIO DE BEM-ESTAR
+   ============================================================ */
+.cardapio{background:var(--creme);position:relative;overflow:hidden}
+.cardapio__menu{
+  max-width:780px;margin-inline:auto;background:#FFFDF7;
+  border:1px solid rgba(196,145,47,.45);border-radius:6px;
+  padding:32px 22px 28px;box-shadow:var(--sombra-suave);position:relative;
+}
+.cardapio__menu::before{
+  content:"";position:absolute;inset:8px;border:1px solid rgba(196,145,47,.22);border-radius:3px;pointer-events:none;
+}
+.cardapio__topo{text-align:center;margin-bottom:24px;position:relative;z-index:1}
+.cardapio__topo .script{font-family:var(--fonte-script);font-size:2.5rem;color:var(--dourado-escuro);line-height:1;display:block}
+.cardapio__topo p{font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--marrom-suave);margin:8px 0 0}
+.cardapio__grupo{margin-bottom:22px;position:relative;z-index:1}
+.cardapio__grupo h3{
+  font-family:var(--fonte-titulo);font-size:1.28rem;font-style:italic;color:var(--verde-escuro);
+  text-align:center;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid rgba(107,142,95,.25);
+}
+.cardapio__item{
+  display:flex;align-items:baseline;gap:8px;font-size:.85rem;color:var(--marrom);
+  padding:6px 0;
+}
+.cardapio__item .nome{white-space:nowrap}
+.cardapio__item .pontos{flex:1;border-bottom:1px dotted rgba(138,116,97,.5);transform:translateY(-3px)}
+.cardapio__item .tempo{font-size:.74rem;color:var(--marrom-suave);white-space:nowrap;font-variant-numeric:tabular-nums}
+.cardapio__grid{display:grid;gap:0 28px}
+.cardapio__rodape{
+  text-align:center;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--marrom-suave);border-top:1px dotted rgba(196,145,47,.5);padding-top:16px;margin-top:6px;
+}
+
+/* ============================================================
+   13) GALERIA
+   ============================================================ */
+.galeria__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.galeria__item{
+  position:relative;overflow:hidden;border-radius:14px;background:var(--creme);
+  box-shadow:var(--sombra-card);
+}
+.galeria__item:nth-child(1),.galeria__item:nth-child(6){grid-column:span 2}
+.galeria__item img{width:100%;height:100%;object-fit:cover;aspect-ratio:1;transition:transform .6s var(--transicao)}
+.galeria__item:nth-child(1) img,.galeria__item:nth-child(6) img{aspect-ratio:16/10}
+.galeria__item:hover img{transform:scale(1.05)}
+.galeria__item figcaption{
+  position:absolute;inset:auto 0 0 0;padding:26px 14px 12px;
+  background:linear-gradient(to top, rgba(46,36,21,.78), transparent);
+  color:#FFF8E7;font-size:.72rem;letter-spacing:.08em;
+}
+
+/* ============================================================
+   14) CONTADOR
+   ============================================================ */
+.numeros{background:var(--marrom);color:var(--creme);padding:46px 0;position:relative;overflow:hidden}
+.numeros::before{
+  content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);
+  width:min(90%,700px);height:1px;background-image:linear-gradient(var(--dourado-claro) 45%, transparent 0);
+  background-size:8px 1px;background-repeat:repeat-x;opacity:.6;
+}
+.numeros__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 12px;text-align:center}
+.numero__valor{
+  font-family:var(--fonte-titulo);font-size:clamp(2rem,8vw,2.9rem);line-height:1;
+  color:var(--dourado-claro);font-weight:500;display:block;font-variant-numeric:tabular-nums;
+}
+.numero__rotulo{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(251,241,218,.85);margin-top:8px;line-height:1.5;display:block}
+
+/* ============================================================
+   15) DEPOIMENTOS
+   ============================================================ */
+.depoimentos{background:var(--creme-claro);overflow:hidden}
+.depoimentos__viewport{overflow:hidden;margin-inline:-22px;padding:6px 22px}
+.depoimentos__trilha{display:flex;transition:transform .55s var(--transicao);will-change:transform}
+.depoimento{
+  flex:0 0 100%;padding-inline:6px;
+}
+.depoimento__card{
+  background:#fff;border:1px solid rgba(196,145,47,.22);border-radius:var(--raio);
+  padding:26px 22px;height:100%;box-shadow:var(--sombra-card);position:relative;
+}
+.depoimento__aspas{
+  font-family:var(--fonte-titulo);font-size:3.4rem;line-height:.6;color:rgba(196,145,47,.35);
+  display:block;margin-bottom:10px;
+}
+.depoimento__texto{font-family:var(--fonte-titulo);font-size:1.08rem;font-style:italic;color:var(--marrom);line-height:1.6;margin-bottom:20px}
+.depoimento__autora{display:flex;align-items:center;gap:12px}
+.depoimento__autora img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--creme)}
+.depoimento__autora strong{display:block;font-family:var(--fonte-texto);font-size:.85rem;font-weight:600;color:var(--grafite);line-height:1.3}
+.depoimento__autora span{font-size:.7rem;color:var(--marrom-suave)}
+.estrelas{display:flex;gap:2px;margin-bottom:12px;color:var(--dourado)}
+.estrelas svg{width:14px;height:14px}
+.depoimentos__controles{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:22px}
+.carrossel-btn{
+  width:44px;height:44px;border-radius:50%;border:1px solid rgba(107,142,95,.35);
+  display:grid;place-items:center;color:var(--marrom);background:rgba(255,255,255,.7);
+  transition:background .25s,color .25s,border-color .25s;
+}
+.carrossel-btn:hover{background:var(--verde);color:#fff;border-color:var(--verde)}
+.carrossel-btn svg{width:18px;height:18px}
+.depoimentos__dots{display:flex;gap:7px;align-items:center}
+.depoimentos__dots button{width:8px;height:8px;border-radius:50%;background:rgba(107,142,95,.3);transition:width .3s,background .3s}
+.depoimentos__dots button[aria-current="true"]{width:22px;border-radius:99px;background:var(--dourado)}
+
+/* ============================================================
+   16) FAQ
+   ============================================================ */
+.faq{background:var(--creme)}
+.faq__lista{max-width:760px;margin-inline:auto;display:grid;gap:10px}
+.faq__item{border:1px solid rgba(196,145,47,.3);border-radius:14px;background:#FFFDF7;overflow:hidden;transition:border-color .3s,box-shadow .3s}
+.faq__item[open]{border-color:var(--dourado);box-shadow:var(--sombra-card)}
+.faq__item summary{
+  list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;
+  padding:16px 18px;min-height:58px;font-size:.92rem;font-weight:500;color:var(--marrom);
+}
+.faq__item summary::-webkit-details-marker{display:none}
+.faq__item summary::after{
+  content:"";margin-left:auto;flex:none;width:14px;height:14px;
+  border-right:1.6px solid var(--dourado);border-bottom:1.6px solid var(--dourado);
+  transform:rotate(45deg);transition:transform .3s var(--transicao);
+}
+.faq__item[open] summary::after{transform:rotate(-135deg)}
+.faq__resposta{padding:0 18px 18px;font-size:.86rem;color:var(--marrom-suave);line-height:1.7}
+.faq__resposta p{margin:0}
+
+/* ============================================================
+   17) AGENDAMENTO (formulário)
+   ============================================================ */
+.agenda{background:linear-gradient(165deg,var(--creme) 0%,#F3E4C4 100%);position:relative;overflow:hidden}
+.agenda .circulo-org{width:300px;aspect-ratio:1;background:rgba(107,142,95,.12);right:-120px;top:-60px}
+.agenda__grid{display:grid;gap:30px;position:relative;z-index:1}
+.form{background:rgba(255,253,247,.95);border:1px solid rgba(196,145,47,.35);border-radius:var(--raio);padding:24px 20px 26px;box-shadow:var(--sombra-suave)}
+.form__linha{display:grid;gap:16px}
+.campo{display:block;margin-bottom:14px}
+.campo > span{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--marrom-suave);margin-bottom:6px}
+.campo input,.campo select,.campo textarea{
+  width:100%;padding:13px 14px;border-radius:12px;border:1px solid rgba(138,116,97,.35);
+  background:#fff;font-family:var(--fonte-texto);font-size:.92rem;color:var(--grafite);
+  min-height:48px;transition:border-color .25s,box-shadow .25s;
+}
+.campo input:focus,.campo select:focus,.campo textarea:focus{
+  outline:none;border-color:var(--verde);box-shadow:0 0 0 3px rgba(107,142,95,.18);
+}
+.campo input::placeholder{color:#A99D8F}
+.form .btn{width:100%;margin-top:6px}
+.form__nota{font-size:.7rem;color:var(--marrom-suave);text-align:center;margin:12px 0 0;line-height:1.6}
+.agenda__info{display:grid;gap:14px;align-content:start}
+.info-item{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.55);border-radius:14px;padding:14px 16px;border:1px solid rgba(196,145,47,.18)}
+.info-item svg{flex:none;width:20px;height:20px;color:var(--dourado-escuro);margin-top:3px}
+.info-item strong{display:block;font-size:.82rem;color:var(--marrom);font-weight:600;letter-spacing:.02em}
+.info-item span{font-size:.82rem;color:var(--marrom-suave);line-height:1.55;display:block}
+
+/* ============================================================
+   18) CONTATO / MAPA / RODAPÉ
+   ============================================================ */
+.contato{background:var(--creme-claro)}
+.contato__grid{display:grid;gap:26px}
+.mapa{
+  position:relative;border-radius:var(--raio);overflow:hidden;background:#EDE6D2;
+  border:1px solid rgba(196,145,47,.3);min-height:260px;box-shadow:var(--sombra-card);
+}
+.mapa svg{width:100%;height:100%;display:block;min-height:260px}
+.mapa__pin{
+  position:absolute;left:50%;top:46%;transform:translate(-50%,-100%);
+  display:grid;place-items:center;color:var(--dourado-escuro);
+}
+.mapa__pin svg{width:38px;height:38px;filter:drop-shadow(0 4px 6px rgba(0,0,0,.25))}
+.mapa__pin::after{
+  content:"";position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);
+  width:26px;height:26px;border-radius:50%;background:rgba(196,145,47,.18);animation:pulso 2.4s infinite;
+}
+@keyframes pulso{0%{transform:translateX(-50%) scale(.6);opacity:.9}100%{transform:translateX(-50%) scale(2.1);opacity:0}}
+.mapa__card{
+  position:absolute;left:12px;right:12px;bottom:12px;background:rgba(255,253,247,.96);
+  border-radius:12px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:12px;
+  box-shadow:0 8px 20px -14px rgba(0,0,0,.6);
+}
+.mapa__card strong{display:block;font-size:.82rem;color:var(--marrom)}
+.mapa__card span{font-size:.72rem;color:var(--marrom-suave)}
+.mapa__card a{font-size:.72rem;font-weight:600;color:var(--verde-escuro);white-space:nowrap;text-decoration:underline;text-underline-offset:3px}
+.contato__dados{display:grid;gap:10px}
+.contato__social{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.contato__social a{
+  display:inline-flex;align-items:center;gap:9px;padding:11px 16px;border-radius:999px;
+  border:1px solid rgba(107,142,95,.3);font-size:.8rem;font-weight:500;color:var(--marrom);
+  background:#fff;transition:background .25s,color .25s,border-color .25s;
+}
+.contato__social a:hover{background:var(--verde);color:#fff;border-color:var(--verde)}
+.contato__social svg{width:16px;height:16px}
+
+.footer{background:var(--marrom);color:rgba(251,241,218,.82);padding:44px 0 100px;text-align:center;position:relative;overflow:hidden}
+.footer::before{
+  content:"";position:absolute;inset:0;opacity:.07;pointer-events:none;
+  background-image:radial-gradient(#FBF1DA .7px, transparent .7px);background-size:18px 18px;
+}
+.footer__marca{font-family:var(--fonte-script);font-size:2.2rem;color:var(--creme);line-height:1;display:block}
+.footer__sub{font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--dourado-claro);margin-top:6px}
+.footer__nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;margin:22px 0;font-size:.76rem}
+.footer__nav a{padding:4px 0;border-bottom:1px solid transparent;transition:border-color .25s,color .25s}
+.footer__nav a:hover{color:#fff;border-color:var(--dourado-claro)}
+.footer__social{display:flex;justify-content:center;gap:16px;margin-bottom:20px}
+.footer__social a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(251,241,218,.3);transition:background .25s,color .25s}
+.footer__social a:hover{background:var(--dourado);color:#2E2415;border-color:var(--dourado)}
+.footer__social svg{width:17px;height:17px}
+.footer__legal{font-size:.68rem;line-height:1.7;color:rgba(251,241,218,.62);max-width:52ch;margin:0 auto}
+.footer__topo{margin-top:18px;display:inline-flex;align-items:center;gap:6px;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dourado-claro)}
+
+/* ============================================================
+   19) WHATSAPP FLUTUANTE
+   ============================================================ */
+.whats-float{
+  position:fixed;right:16px;bottom:16px;z-index:95;
+  display:inline-flex;align-items:center;gap:10px;
+  background:#1F7A52;color:#fff;border-radius:999px;
+  padding:13px 16px;box-shadow:0 12px 26px -10px rgba(31,122,82,.8);
+  font-size:.8rem;font-weight:600;letter-spacing:.02em;
+  transition:transform .3s var(--transicao),background .3s;
+}
+.whats-float:hover{transform:translateY(-3px);background:#196444}
+.whats-float svg{width:22px;height:22px;flex:none}
+.whats-float__texto{display:none}
+
+/* ============================================================
+   20) ANIMAÇÕES DE ENTRADA
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--transicao),transform .8s var(--transicao)}
+.reveal.is-visible{opacity:1;transform:none}
+.reveal[data-delay="1"]{transition-delay:.09s}
+.reveal[data-delay="2"]{transition-delay:.18s}
+.reveal[data-delay="3"]{transition-delay:.27s}
+.parallax{will-change:transform}
+
+/* Imagem que falhou ao carregar: fundo creme com padrão */
+.img-fail{
+  background:
+    repeating-linear-gradient(45deg, rgba(196,145,47,.08) 0 8px, transparent 8px 16px),
+    linear-gradient(160deg,var(--creme),#F0E2C6);
+  min-height:160px;
+}
+
+/* ============================================================
+   21) BREAKPOINTS (mobile-first)
+   ============================================================ */
+@media (min-width:600px){
+  .secao{padding:86px 0}
+  .hero__botoes{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .galeria__grid{grid-template-columns:repeat(3,1fr)}
+  .galeria__item:nth-child(1),.galeria__item:nth-child(6){grid-column:span 1}
+  .galeria__item:nth-child(1) img,.galeria__item:nth-child(6) img{aspect-ratio:1}
+  .galeria__item:nth-child(1){grid-column:span 2}
+  .galeria__item:nth-child(1) img{aspect-ratio:2/1}
+  .form__linha{grid-template-columns:1fr 1fr}
+  .whats-float__texto{display:inline}
+  .whats-float{padding:14px 20px}
+  .numeros__grid{grid-template-columns:repeat(4,1fr)}
+  .cardapio__grid{grid-template-columns:1fr 1fr}
+  .cardapio__menu{padding:40px 34px 32px}
+  .depoimento{flex:0 0 50%}
+  .kit__fita{right:-8px}
+}
+
+@media (min-width:860px){
+  :root{--header-h:82px}
+  .secao{padding:104px 0}
+  .header__cta{display:inline-flex;padding:12px 22px;min-height:44px;font-size:.8rem}
+  .menu-btn{display:none}
+  .nav{display:block}
+  .menu-mobile{display:none}
+  .hero{padding-top:calc(var(--header-h) + 60px)}
+  .hero__inner{padding-bottom:10px}
+  .hero__card{max-width:520px;padding:34px 34px 26px}
+  .hero__painel{margin-top:44px;padding:54px 22px 64px;border-radius:50% 50% 0 0 / 30% 30% 0 0}
+  .hero__conteudo{max-width:560px}
+  .hero__texto{font-size:.98rem}
+  .hero__botoes{grid-template-columns:auto auto;justify-content:center}
+  .hero__botoes .btn{width:auto;padding-inline:26px}
+  .hero__circulo-verde{width:min(40vw,470px);right:-8%;top:30%}
+  .sobre__grid{grid-template-columns:.85fr 1fr;gap:56px}
+  .sobre__figura{margin:0}
+  .cards{grid-template-columns:repeat(3,1fr);gap:16px}
+  .kits__grid{grid-template-columns:repeat(3,1fr)}
+  .kit--destaque{transform:scale(1.02)}
+  .kit--destaque:hover{transform:scale(1.02) translateY(-4px)}
+  .depoimento{flex:0 0 33.3333%}
+  .agenda__grid{grid-template-columns:1.15fr .85fr;gap:40px;align-items:start}
+  .contato__grid{grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .mapa,.mapa svg{min-height:340px}
+  .footer{padding-bottom:56px}
+  .quiz__box{padding:34px 36px 32px}
+  .quiz__pergunta{font-size:1.65rem}
+  .quiz__acoes{grid-template-columns:1fr auto}
+  .comparador__box{aspect-ratio:16/10}
+  .galeria__grid{gap:14px}
+  .galeria__item:nth-child(1){grid-column:span 2}
+  .galeria__item:nth-child(6){grid-column:span 1}
+}
+
+@media (min-width:1080px){
+  .nav__lista{gap:32px}
+  .catalogo .cabecalho-secao{max-width:640px}
+  .cardapio__menu{padding:48px 52px 36px}
+}
+
+/* Acessibilidade: respeita preferência por menos movimento */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<span id="topo"></span>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="#inicio" class="marca" aria-label="Larissa Souza Estética Integrativa — início">
+      <span class="marca__nome">Larissa Souza</span>
+      <span class="marca__sub">Estética Integrativa</span>
+    </a>
+
+    <nav class="nav" aria-label="Navegação principal">
+      <ul class="nav__lista">
+        <li><a class="nav__link" href="#sobre">Sobre</a></li>
+        <li><a class="nav__link" href="#catalogo">Procedimentos</a></li>
+        <li><a class="nav__link" href="#quiz">Meu tratamento</a></li>
+        <li><a class="nav__link" href="#kits">Kits</a></li>
+        <li><a class="nav__link" href="#galeria">Galeria</a></li>
+        <li><a class="nav__link" href="#faq">Dúvidas</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn--primario header__cta" href="#agendamento">Agendar atendimento</a>
+
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuMobile" aria-label="Abrir menu de navegação">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Menu mobile -->
+<div class="menu-mobile" id="menuMobile">
+  <a href="#sobre">Sobre</a>
+  <a href="#catalogo">Catálogo de procedimentos</a>
+  <a href="#quiz">Qual tratamento é ideal?</a>
+  <a href="#kits">Kits de emagrecimento</a>
+  <a href="#galeria">Galeria</a>
+  <a href="#depoimentos">Depoimentos</a>
+  <a href="#faq">Perguntas frequentes</a>
+  <a href="#contato">Contato</a>
+  <a class="btn btn--dourado" href="#agendamento">Agendar atendimento</a>
+</div>
+
+<main id="conteudo">
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="inicio" aria-labelledby="hero-titulo">
+  <div class="hero__textura" aria-hidden="true"></div>
+  <div class="hero__linhas" aria-hidden="true"></div>
+  <div class="hero__circulo-verde" aria-hidden="true"></div>
+
+  <div class="hero__inner container">
+    <div class="hero__card">
+      <!-- Silhuetas line art em marca d'água -->
+      <svg class="hero__silhueta" viewBox="0 0 400 320" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+        <g stroke="currentColor" stroke-width="0.9" stroke-linecap="round">
+          <path d="M96 300c-8-42 4-78 26-98 14-13 16-34 12-48-4-15 6-27 21-27s25 13 21 28c-4 15-2 33 10 45 19 19 27 55 20 100"/>
+          <path d="M120 300c-6-34 2-62 18-78 8-8 9-20 7-28"/>
+          <path d="M170 300c2-30 8-54 22-70 9-10 11-24 9-34"/>
+          <path d="M236 300c-6-46 6-82 32-102 18-14 20-38 15-54-5-17 7-30 24-30s28 14 23 31c-5 17-3 37 11 50 22 20 30 60 24 105"/>
+          <path d="M262 300c-4-38 6-66 24-82"/>
+          <path d="M312 300c2-34 8-58 22-72"/>
+          <circle cx="146" cy="126" r="2.4"/><circle cx="286" cy="120" r="2.4"/>
+        </g>
+        <g stroke="currentColor" stroke-width="0.55" opacity="0.6" stroke-linecap="round">
+          <path d="M40 60c14 12 30 6 30-6s-16-18-28-10"/>
+          <path d="M366 250c10-8 22-4 22 6s-12 14-20 8"/>
+        </g>
+      </svg>
+
+      <h1 class="hero__nome" id="hero-titulo">Larissa Souza</h1>
+      <span class="hero__tag">Estética Integrativa</span>
+      <p class="hero__slogan">Aliado com o seu bem estar</p>
+
+      <div class="hero__sociais">
+        <!-- Trocar pelos links reais no objeto CONFIG (final do arquivo) -->
+        <a href="https://www.facebook.com/larissasouzaestetica" target="_blank" rel="noopener" aria-label="Facebook da clínica" data-social="facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.3-1.5 1.6-1.5h1.6V4.6c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.4H7.8V14h2.7v8h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/larissasouza.estetica" target="_blank" rel="noopener" aria-label="Instagram da clínica" data-social="instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Painel creme orgânico -->
+  <div class="hero__painel">
+    <svg class="hero__art" viewBox="0 0 600 260" fill="none" aria-hidden="true">
+      <g stroke="currentColor" stroke-width="1" stroke-linecap="round">
+        <path d="M60 260c-6-56 8-104 38-130 20-17 22-46 16-64-6-20 8-36 29-36s35 17 29 37c-6 20-3 45 15 60 27 24 38 76 30 133"/>
+        <path d="M104 260c-4-46 6-84 26-104"/>
+        <path d="M152 260c3-40 10-72 28-92"/>
+        <path d="M330 260c-8-62 8-110 42-136 24-18 26-50 20-70-7-22 9-40 32-40s38 19 31 41c-7 22-4 50 16 67 29 26 40 82 32 138"/>
+        <path d="M380 260c-4-50 8-88 30-110"/>
+        <path d="M434 260c4-44 12-78 32-100"/>
+        <path d="M486 110c14 10 30 4 30-8s-16-20-28-12"/>
+        <path d="M232 200c12-8 26-3 26 7s-14 15-22 9"/>
+      </g>
+    </svg>
+
+    <div class="hero__conteudo">
+      <h2 class="hero__titulo">Um cuidado que olha para <em>você</em> por inteiro</h2>
+      <p class="hero__texto">Estética corporal, facial e terapias que acolhem — porque beleza e bem-estar caminham juntos.</p>
+      <div class="hero__botoes">
+        <a class="btn btn--primario" href="#agendamento">Agendar atendimento</a>
+        <a class="btn btn--contorno" href="#catalogo">Ver catálogo de procedimentos</a>
+      </div>
+      <p class="hero__rodape">
+        <span>Atendimento individual</span>
+        <span>Ambiente acolhedor</span>
+        <span>Protocolos personalizados</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SOBRE
+     ============================================================ -->
+<section class="secao secao--creme sobre" id="sobre" aria-labelledby="sobre-titulo">
+  <div class="container sobre__grid">
+    <figure class="sobre__figura reveal">
+      <!-- IMAGEM ILUSTRATIVA — trocar por foto real da profissional (retrato vertical, 4:5) -->
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=75"
+           alt="Retrato ilustrativo de uma profissional de estética em ambiente claro"
+           width="800" height="1000" loading="lazy" decoding="async"
+           onerror="this.classList.add('img-fail');this.removeAttribute('src')">
+      <span class="sobre__moldura" aria-hidden="true"></span>
+      <div class="sobre__selo" aria-hidden="true"><strong>LS</strong><span>Estética</span><span>integrativa</span></div>
+    </figure>
+
+    <div class="reveal" data-delay="1">
+      <span class="eyebrow">Sobre a clínica</span>
+      <h2 class="titulo-secao" id="sobre-titulo">Cuidar do corpo é também<br>cuidar da <em>mente</em></h2>
+      <p class="subtitulo">A Larissa Souza Estética Integrativa nasceu de um olhar simples: nenhum procedimento faz sentido se você não se sentir acolhida. Aqui, cada atendimento começa com escuta — do seu objetivo, da sua rotina e do seu tempo.</p>
+      <p class="subtitulo">Unimos técnicas de estética corporal e facial a terapias integrativas, em um espaço tranquilo, de luz suave e aroma de ervas. Um respiro no meio da semana, com resultados construídos com constância e respeito ao seu corpo.</p>
+
+      <ul class="sobre__lista">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>
+          <span><strong>Protocolos personalizados</strong> — nada de pacotes prontos: avaliamos sua pele, seu corpo e sua rotina.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>
+          <span><strong>Abordagem integrativa</strong> — estética, relaxamento e terapias complementares no mesmo cuidado.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>
+          <span><strong>Atendimento individual</strong> — uma cliente por horário, com privacidade e calma.</span>
+        </li>
+      </ul>
+
+      <span class="assinatura">Larissa Souza<small>Esteticista integrativa</small></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CATÁLOGO DE PROCEDIMENTOS
+     ============================================================ -->
+<section class="secao catalogo" id="catalogo" aria-labelledby="catalogo-titulo">
+  <div class="circulo-org" aria-hidden="true"></div>
+  <div class="container">
+    <div class="cabecalho-secao reveal">
+      <span class="eyebrow">Catálogo</span>
+      <h2 class="titulo-secao" id="catalogo-titulo">Catálogo de <em>procedimentos</em></h2>
+      <p class="subtitulo">Toque em um procedimento para ver a descrição, os benefícios e a duração estimada. Filtre por categoria para encontrar o cuidado que combina com o seu momento.</p>
+    </div>
+
+    <div class="tabs reveal" role="tablist" aria-label="Categorias de procedimentos">
+      <button class="tab" role="tab" id="tab-corpo" aria-controls="painel-procedimentos" aria-selected="true" data-categoria="corpo">Estética Corporal</button>
+      <button class="tab" role="tab" id="tab-facial" aria-controls="painel-procedimentos" aria-selected="false" data-categoria="facial">Estética Facial</button>
+      <button class="tab" role="tab" id="tab-terapias" aria-controls="painel-procedimentos" aria-selected="false" data-categoria="terapias">Terapias</button>
+    </div>
+
+    <div class="catalogo__meta reveal">
+      <span class="catalogo__contagem" id="catalogoContagem" aria-live="polite">17 procedimentos</span>
+      <span class="catalogo__dica">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+        Toque no card para abrir os detalhes
+      </span>
+    </div>
+
+    <div class="cards" id="painel-procedimentos" role="tabpanel" aria-labelledby="tab-corpo"></div>
+
+    <p class="catalogo__aviso">Durações e descrições são estimativas ilustrativas. A indicação de cada procedimento é feita em avaliação individual, presencialmente.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     QUIZ — QUAL TRATAMENTO É IDEAL PARA MIM
+     ============================================================ -->
+<section class="secao quiz" id="quiz" aria-labelledby="quiz-titulo">
+  <div class="circulo-org" aria-hidden="true"></div>
+  <div class="container">
+    <div class="cabecalho-secao reveal" style="text-align:center">
+      <span class="eyebrow" style="justify-content:center">Interativo</span>
+      <h2 class="titulo-secao" id="quiz-titulo">Qual tratamento é <em>ideal</em> para mim?</h2>
+      <p class="subtitulo" style="margin-inline:auto">Três perguntas rápidas e uma sugestão de cuidado para o seu momento. Sem cadastro, sem compromisso.</p>
+    </div>
+
+    <div class="quiz__box reveal">
+      <div class="quiz__progresso" aria-hidden="true">
+        <span class="quiz__bolinha atual"><i></i></span>
+        <span class="quiz__bolinha"><i></i></span>
+        <span class="quiz__bolinha"><i></i></span>
+      </div>
+
+      <div class="quiz__etapas" aria-live="polite">
+        <!-- Passo 1 -->
+        <div class="quiz__passo ativo" data-passo="0">
+          <span class="quiz__etapa">Pergunta 1 de 3</span>
+          <h3 class="quiz__pergunta">O que você mais quer cuidar agora?</h3>
+          <div class="quiz__opcoes" role="group" aria-label="Objetivo">
+            <button class="quiz__opcao" data-q="objetivo" data-v="corpo"><span class="ic" aria-hidden="true">✦</span><span><strong>Meu corpo</strong><small>Medidas, celulite, inchaço, pós-parto</small></span></button>
+            <button class="quiz__opcao" data-q="objetivo" data-v="rosto"><span class="ic" aria-hidden="true">◈</span><span><strong>Meu rosto</strong><small>Pele, textura, manchas, viço</small></span></button>
+            <button class="quiz__opcao" data-q="objetivo" data-v="relaxar"><span class="ic" aria-hidden="true">❋</span><span><strong>Relaxar e desacelerar</strong><small>Tensão, ansiedade, noites mal dormidas</small></span></button>
+          </div>
+        </div>
+
+        <!-- Passo 2 -->
+        <div class="quiz__passo" data-passo="1">
+          <span class="quiz__etapa">Pergunta 2 de 3</span>
+          <h3 class="quiz__pergunta">Como você prefere ser cuidada?</h3>
+          <div class="quiz__opcoes" role="group" aria-label="Preferência">
+            <button class="quiz__opcao" data-q="preferencia" data-v="maos"><span class="ic" aria-hidden="true">☾</span><span><strong>Com as mãos</strong><small>Massagens, manobras e toque acolhedor</small></span></button>
+            <button class="quiz__opcao" data-q="preferencia" data-v="tecnologia"><span class="ic" aria-hidden="true">✧</span><span><strong>Com tecnologia</strong><small>Equipamentos e protocolos modernos</small></span></button>
+            <button class="quiz__opcao" data-q="preferencia" data-v="natureza"><span class="ic" aria-hidden="true">❀</span><span><strong>Com recursos naturais</strong><small>Ervas, argilas, sais e florais</small></span></button>
+          </div>
+        </div>
+
+        <!-- Passo 3 -->
+        <div class="quiz__passo" data-passo="2">
+          <span class="quiz__etapa">Pergunta 3 de 3</span>
+          <h3 class="quiz__pergunta">Quanto tempo você tem hoje?</h3>
+          <div class="quiz__opcoes" role="group" aria-label="Tempo disponível">
+            <button class="quiz__opcao" data-q="tempo" data-v="curto"><span class="ic" aria-hidden="true">◷</span><span><strong>Até 45 minutos</strong><small>Uma pausa rápida no dia</small></span></button>
+            <button class="quiz__opcao" data-q="tempo" data-v="medio"><span class="ic" aria-hidden="true">◷</span><span><strong>Cerca de 1 hora</strong><small>Tempo para respirar com calma</small></span></button>
+            <button class="quiz__opcao" data-q="tempo" data-v="longo"><span class="ic" aria-hidden="true">◷</span><span><strong>1h30 ou mais</strong><small>Quero um ritual completo</small></span></button>
+          </div>
+        </div>
+
+        <button class="quiz__voltar" type="button" id="quizVoltar" hidden>← Voltar</button>
+
+        <!-- Resultado -->
+        <div class="quiz__resultado" id="quizResultado" aria-live="polite">
+          <span class="quiz__selo">Sua sugestão</span>
+          <h3 class="quiz__pergunta" id="quizResultadoTitulo">Cuidado personalizado</h3>
+          <p class="subtitulo" id="quizResultadoTexto" style="font-size:.88rem"></p>
+          <div class="quiz__sugestoes" id="quizSugestoes"></div>
+          <div class="quiz__acoes">
+            <a class="btn btn--whats" id="quizWhats" href="#" target="_blank" rel="noopener">Enviar no WhatsApp</a>
+            <button class="btn btn--contorno" type="button" id="quizRefazer">Refazer</button>
+          </div>
+          <button class="quiz__reiniciar" type="button" id="quizVerCatalogo">Prefiro ver o catálogo completo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     KITS DE EMAGRECIMENTO
+     ============================================================ -->
+<section class="secao kits" id="kits" aria-labelledby="kits-titulo">
+  <div class="circulo-org" aria-hidden="true"></div>
+  <div class="container">
+    <div class="cabecalho-secao reveal">
+      <span class="eyebrow">Rituais completos</span>
+      <h2 class="titulo-secao" id="kits-titulo">Kits de <em>emagrecimento</em></h2>
+      <p class="subtitulo">Combinações de procedimentos pensadas para acompanhar seu objetivo com constância. Os valores e as sessões são ajustados na avaliação.</p>
+    </div>
+
+    <div class="kits__grid">
+      <!-- KIT 1 -->
+      <article class="kit reveal">
+        <h3 class="kit__nome">Essencial</h3>
+        <p class="kit__desc">Para começar a cuidar do corpo com leveza, em poucas sessões por mês.</p>
+        <ul class="kit__lista">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>4 sessões de Drenagem Linfática</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>2 sessões de Massagem Modeladora</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>1 Manta Térmica</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>Avaliação inicial + orientações</li>
+        </ul>
+        <p class="kit__preco"><strong>Sob avaliação</strong>Condições em até 3x</p>
+        <a class="btn btn--primario" href="#" data-wa="Olá, Larissa! Tenho interesse no Kit Essencial de emagrecimento. Pode me passar os detalhes?" target="_blank" rel="noopener">Fazer pedido</a>
+      </article>
+
+      <!-- KIT 2 -->
+      <article class="kit kit--destaque reveal" data-delay="1">
+        <span class="kit__fita">Mais escolhido</span>
+        <h3 class="kit__nome">Premium</h3>
+        <p class="kit__desc">O equilíbrio entre resultado, relaxamento e um ritual que você espera na semana.</p>
+        <ul class="kit__lista">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>6 sessões de Drenagem Linfática</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>4 sessões de Esculpe Detox</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>2 Criofrequência (área localizada)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>2 Massagens Relaxantes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>1 Banho de Lua</li>
+        </ul>
+        <p class="kit__preco"><strong>Sob avaliação</strong>Condições em até 6x</p>
+        <a class="btn btn--dourado" href="#" data-wa="Olá, Larissa! Tenho interesse no Kit Premium de emagrecimento. Pode me passar os detalhes?" target="_blank" rel="noopener">Fazer pedido</a>
+      </article>
+
+      <!-- KIT 3 -->
+      <article class="kit reveal" data-delay="2">
+        <h3 class="kit__nome">Completo</h3>
+        <p class="kit__desc">Acompanhamento mais próximo, unindo corpo, tecnologia e terapias de relaxamento.</p>
+        <ul class="kit__lista">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>8 sessões de Drenagem Linfática</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>4 sessões de Criolipólise</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>4 sessões de Corrente Russa</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>2 SpaDetox + 2 Reflexoterapia</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>Acompanhamento e ajustes a cada 4 sessões</li>
+        </ul>
+        <p class="kit__preco"><strong>Sob avaliação</strong>Condições em até 10x</p>
+        <a class="btn btn--primario" href="#" data-wa="Olá, Larissa! Tenho interesse no Kit Completo de emagrecimento. Pode me passar os detalhes?" target="_blank" rel="noopener">Fazer pedido</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ANTES E DEPOIS (comparador com slider)
+     ============================================================ -->
+<section class="secao comparador" id="resultados" aria-labelledby="comparador-titulo">
+  <div class="container">
+    <div class="cabecalho-secao reveal" style="text-align:center">
+      <span class="eyebrow" style="justify-content:center">Resultados</span>
+      <h2 class="titulo-secao" id="comparador-titulo">Antes e <em>depois</em></h2>
+      <p class="subtitulo" style="margin-inline:auto">Arraste a alça (ou use as setas do teclado) para comparar. Imagens meramente ilustrativas, sem retoque de resultados reais.</p>
+    </div>
+
+    <div class="comparador__box reveal" id="comparadorBox">
+      <!-- IMAGENS ILUSTRATIVAS — substituir por fotos reais autorizadas (mesmo enquadramento/luz) -->
+      <img class="comparador__img comparador__antes"
+           src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1000&q=70"
+           alt="Imagem ilustrativa do corpo antes do tratamento, em luz natural"
+           width="1000" height="750" loading="lazy" decoding="async"
+           onerror="this.classList.add('img-fail');this.removeAttribute('src')">
+      <img class="comparador__img comparador__depois" id="imgDepois"
+           src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1000&q=70"
+           alt="Imagem ilustrativa do corpo depois do tratamento, com pele mais uniforme"
+           width="1000" height="750" loading="lazy" decoding="async"
+           onerror="this.classList.add('img-fail');this.removeAttribute('src')">
+      <span class="comparador__alca" id="comparadorAlca" aria-hidden="true"></span>
+      <input class="comparador__range" id="comparadorRange" type="range" min="0" max="100" value="50"
+             aria-label="Comparar antes e depois" aria-valuetext="50% antes, 50% depois">
+    </div>
+    <p class="comparador__legenda reveal"><strong>Imagens ilustrativas</strong> — cada corpo responde de forma diferente. Resultados variam conforme constância, rotina e avaliação individual.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     CARDÁPIO DE BEM-ESTAR
+     ============================================================ -->
+<section class="secao cardapio" id="cardapio" aria-labelledby="cardapio-titulo">
+  <div class="container">
+    <div class="cabecalho-secao reveal" style="text-align:center">
+      <span class="eyebrow" style="justify-content:center">Menu da casa</span>
+      <h2 class="titulo-secao" id="cardapio-titulo">Cardápio de <em>bem-estar</em></h2>
+      <p class="subtitulo" style="margin-inline:auto">Nosso catálogo completo, servido como um menu: escolha pelo tempo que você tem e pelo cuidado que seu corpo pede.</p>
+    </div>
+
+    <div class="cardapio__menu reveal">
+      <div class="cardapio__topo">
+        <span class="script">Larissa Souza</span>
+        <p>Estética Integrativa · Menu de cuidados</p>
+      </div>
+      <div class="cardapio__grid" id="cardapioGrupos"><!-- preenchido via JS a partir do catálogo --></div>
+      <p class="cardapio__rodape">Aliado com o seu bem estar</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALERIA
+     ============================================================ -->
+<section class="secao secao--creme" id="galeria" aria-labelledby="galeria-titulo">
+  <div class="container">
+    <div class="cabecalho-secao reveal">
+      <span class="eyebrow">Nosso espaço</span>
+      <h2 class="titulo-secao" id="galeria-titulo">Um refúgio em tons de <em>dourado</em></h2>
+      <p class="subtitulo">Luz baixa, cheiro de ervas e silêncio na medida. Fotos ilustrativas para você conhecer o clima da clínica.</p>
+    </div>
+
+    <div class="galeria__grid">
+      <!-- IMAGEM ILUSTRATIVA — foto real: sala de massagem com luz indireta -->
+      <figure class="galeria__item reveal">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=70"
+             alt="Ilustração de massagem relaxante em ambiente de spa com luz suave"
+             width="1200" height="800" loading="lazy" decoding="async"
+             onerror="this.classList.add('img-fail');this.removeAttribute('src')">
+        <figcaption>Sala de massagem</figcaption>
+      </figure>
+      <!-- IMAGEM ILUSTRATIVA — foto real: cabine facial / maca preparada -->
+      <figure class="galeria__item reveal" data-delay="1">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=70"
+             alt="Ilustração de limpeza de pele sendo aplicada em cabine facial"
+             width="800" height="800" loading="lazy" decoding="async"
+             onerror="this.classList.add('img-fail');this.removeAttribute('src')">
+        <figcaption>Cabine facial</figcaption>
+      </figure>
+      <!-- IMAGEM ILUSTRATIVA — foto real: detalhe de toalhas e ervas -->
+      <figure class="galeria__item reveal" data-delay="2">
+        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=70"
+             alt="Ilustração de toalhas dobradas com ervas e flores secas"
+             width="800" height="800" loading="lazy" decoding="async"
+             onerror="this.classList.add('img-fail');this.removeAttribute('src')">
+        <figcaption>Ervas e rituais</figcaption>
+      </figure>
+      <!-- IMAGEM ILUSTRATIVA — foto real: pedras quentes sobre a pele -->
+      <figure class="galeria__item reveal">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=70"
+             alt="Ilustração de pedras quentes e óleos usados em massagens"
+             width="800" height="800" loading="lazy" decoding="async"
+             onerror="this.classList.add('img-fail');this.removeAttribute('src')">
+        <figcaption>Pedras quentes</figcaption>
+      </figure>
+      <!-- IMAGEM ILUSTRATIVA — foto real: mãos aplicando creme -->
+      <figure class="galeria__item reveal" data-delay="1">
+        <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=800&q=70"
+             alt="Ilustração de mãos aplicando creme em um atendimento de estética"
+             width="800" height="800" loading="lazy" decoding="async"
+             onerror="this.classList.add('img-fail');this.removeAttribute('src')">
+        <figcaption>Cuidado com as mãos</figcaption>
+      </figure>
+      <!-- IMAGEM ILUSTRATIVA — foto real: recepção da clínica -->
+      <figure class="galeria__item reveal" data-delay="2">
+        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1200&q=70"
+             alt="Ilustração de ambiente de spa com velas, flores e tons creme"
+             width="1200" height="800" loading="lazy" decoding="async"
+             onerror="this.classList.add('img-fail');this.removeAttribute('src')">
+        <figcaption>Ambiente de espera</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTADOR ANIMADO
+     ============================================================ -->
+<section class="numeros" aria-label="Números da clínica">
+  <div class="container">
+    <div class="numeros__grid" id="numerosGrid">
+      <div>
+        <span class="numero__valor" data-contador="1240" data-sufixo="+">0</span>
+        <span class="numero__rotulo">Clientes atendidas</span>
+      </div>
+      <div>
+        <span class="numero__valor" data-contador="4860" data-sufixo="+">0</span>
+        <span class="numero__rotulo">Procedimentos realizados</span>
+      </div>
+      <div>
+        <span class="numero__valor" data-contador="8" data-sufixo="">0</span>
+        <span class="numero__rotulo">Anos de experiência</span>
+      </div>
+      <div>
+        <span class="numero__valor" data-contador="98" data-sufixo="%">0</span>
+        <span class="numero__rotulo">Recomendariam a clínica</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DEPOIMENTOS (carrossel)
+     ============================================================ -->
+<section class="secao depoimentos" id="depoimentos" aria-labelledby="depoimentos-titulo">
+  <div class="container">
+    <div class="cabecalho-secao reveal" style="text-align:center">
+      <span class="eyebrow" style="justify-content:center">Carinho de quem passa por aqui</span>
+      <h2 class="titulo-secao" id="depoimentos-titulo">Elas contam como <em>foi</em></h2>
+      <p class="subtitulo" style="margin-inline:auto">Depoimentos fictícios, criados para ilustrar o site. Nomes e fotos são ilustrativos.</p>
+    </div>
+
+    <div class="depoimentos__viewport reveal">
+      <div class="depoimentos__trilha" id="depoimentosTrilha" aria-live="off">
+        <!-- DEPOIMENTO ILUSTRATIVO 1 -->
+        <div class="depoimento">
+          <article class="depoimento__card">
+            <span class="depoimento__aspas" aria-hidden="true">“</span>
+            <div class="estrelas" aria-label="5 de 5 estrelas">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+            </div>
+            <p class="depoimento__texto">Cheguei esgotada e saí parecendo outra pessoa. A drenagem virou meu momento da semana — o cuidado com o espaço e com os detalhes faz toda a diferença.</p>
+            <div class="depoimento__autora">
+              <!-- FOTO ILUSTRATIVA de cliente fictícia -->
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=70" alt="Foto ilustrativa de Mariana Alves" width="96" height="96" loading="lazy" decoding="async" onerror="this.classList.add('img-fail');this.removeAttribute('src')">
+              <div><strong>Mariana Alves</strong><span>Drenagem linfática</span></div>
+            </div>
+          </article>
+        </div>
+        <!-- DEPOIMENTO ILUSTRATIVO 2 -->
+        <div class="depoimento">
+          <article class="depoimento__card">
+            <span class="depoimento__aspas" aria-hidden="true">“</span>
+            <div class="estrelas" aria-label="5 de 5 estrelas">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+            </div>
+            <p class="depoimento__texto">Minha pele estava opaca e sensível. A limpeza foi feita com uma paciência que eu nunca tinha visto, e as orientações para casa mudaram minha rotina.</p>
+            <div class="depoimento__autora">
+              <!-- FOTO ILUSTRATIVA de cliente fictícia -->
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=120&q=70" alt="Foto ilustrativa de Camila Torres" width="96" height="96" loading="lazy" decoding="async" onerror="this.classList.add('img-fail');this.removeAttribute('src')">
+              <div><strong>Camila Torres</strong><span>Limpeza de pele</span></div>
+            </div>
+          </article>
+        </div>
+        <!-- DEPOIMENTO ILUSTRATIVO 3 -->
+        <div class="depoimento">
+          <article class="depoimento__card">
+            <span class="depoimento__aspas" aria-hidden="true">“</span>
+            <div class="estrelas" aria-label="5 de 5 estrelas">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+            </div>
+            <p class="depoimento__texto">O kit Premium me ajudou a criar constância. Em vez de promessas milagrosas, recebi um plano possível — e o resultado veio no tempo do meu corpo.</p>
+            <div class="depoimento__autora">
+              <!-- FOTO ILUSTRATIVA de cliente fictícia -->
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=70" alt="Foto ilustrativa de Beatriz Nunes" width="96" height="96" loading="lazy" decoding="async" onerror="this.classList.add('img-fail');this.removeAttribute('src')">
+              <div><strong>Beatriz Nunes</strong><span>Kit Premium</span></div>
+            </div>
+          </article>
+        </div>
+        <!-- DEPOIMENTO ILUSTRATIVO 4 -->
+        <div class="depoimento">
+          <article class="depoimento__card">
+            <span class="depoimento__aspas" aria-hidden="true">“</span>
+            <div class="estrelas" aria-label="5 de 5 estrelas">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+            </div>
+            <p class="depoimento__texto">Fui pela massagem relaxante e fiquei pelas terapias. O SpaDetox com floral é um abraço. Saio de lá com o corpo leve e a cabeça silenciosa.</p>
+            <div class="depoimento__autora">
+              <!-- FOTO ILUSTRATIVA de cliente fictícia -->
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=70" alt="Foto ilustrativa de Renata Lopes" width="96" height="96" loading="lazy" decoding="async" onerror="this.classList.add('img-fail');this.removeAttribute('src')">
+              <div><strong>Renata Lopes</strong><span>Terapias integrativas</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimentos__controles reveal">
+      <button class="carrossel-btn" id="depAntes" type="button" aria-label="Depoimento anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg>
+      </button>
+      <div class="depoimentos__dots" id="depDots" role="tablist" aria-label="Selecionar depoimento"></div>
+      <button class="carrossel-btn" id="depDepois" type="button" aria-label="Próximo depoimento">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PERGUNTAS FREQUENTES
+     ============================================================ -->
+<section class="secao faq" id="faq" aria-labelledby="faq-titulo">
+  <div class="container">
+    <div class="cabecalho-secao reveal" style="text-align:center">
+      <span class="eyebrow" style="justify-content:center">Dúvidas</span>
+      <h2 class="titulo-secao" id="faq-titulo">Perguntas <em>frequentes</em></h2>
+      <p class="subtitulo" style="margin-inline:auto">Se a sua dúvida não estiver aqui, chame no WhatsApp — respondemos com o maior carinho.</p>
+    </div>
+
+    <div class="faq__lista reveal">
+      <details class="faq__item">
+        <summary>Como funciona a primeira visita?</summary>
+        <div class="faq__resposta"><p>Começamos com uma conversa e uma avaliação cuidadosa da sua pele, do seu corpo e dos seus objetivos. A partir disso, montamos um plano possível para a sua rotina — sem compromisso de fechar pacotes no mesmo dia.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Existem contraindicações?</summary>
+        <div class="faq__resposta"><p>Sim. Alguns procedimentos não são indicados em casos de gestação, febre, infecções de pele, uso de anticoagulantes ou doenças crônicas descompensadas. Por isso a avaliação inicial e a sua honestidade no questionário são essenciais. Em dúvida, pedimos liberação médica antes de qualquer sessão.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Quantas sessões vou precisar?</summary>
+        <div class="faq__resposta"><p>Depende do objetivo e da resposta individual do seu corpo. Protocolos corporais costumam ser pensados em ciclos de 8 a 10 sessões; procedimentos faciais, em manutenções mensais. Na avaliação, apresentamos uma estimativa realista — nunca uma promessa fechada.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Quais são as formas de pagamento?</summary>
+        <div class="faq__resposta"><p>Aceitamos Pix, dinheiro, cartão de débito e crédito. Pacotes e kits podem ser parcelados em até 10x, conforme a condição vigente. Os valores são informados na avaliação, de forma transparente.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Como funciona o cancelamento ou remarcação?</summary>
+        <div class="faq__resposta"><p>Pedimos aviso com pelo menos 12 horas de antecedência para remarcar sem custo. Cancelamentos com menos de 12 horas podem ser considerados como sessão realizada, pois o horário é reservado exclusivamente para você.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Quais cuidados devo ter após o procedimento?</summary>
+        <div class="faq__resposta"><p>Depende do procedimento: em geral, hidratação, protetor solar e evitar sol direto, sauna e atividades intensas por 24 a 48 horas. Para peelings e microagulhamento, evitamos maquiagem e ativos ácidos por alguns dias. Você recebe orientações por escrito antes de sair.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     AGENDAMENTO
+     ============================================================ -->
+<section class="secao agenda" id="agendamento" aria-labelledby="agenda-titulo">
+  <div class="circulo-org" aria-hidden="true"></div>
+  <div class="container">
+    <div class="agenda__grid">
+      <div class="reveal">
+        <span class="eyebrow">Agendamento</span>
+        <h2 class="titulo-secao" id="agenda-titulo">Reserve o seu <em>momento</em></h2>
+        <p class="subtitulo">Preencha os dados abaixo e nós abrimos o WhatsApp com a sua mensagem pronta. Confirmamos o horário por lá, com todo o cuidado.</p>
+
+        <form class="form" id="formAgendamento" novalidate>
+          <div class="form__linha">
+            <label class="campo">
+              <span>Nome</span>
+              <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Como podemos te chamar?" required>
+            </label>
+            <label class="campo">
+              <span>Telefone</span>
+              <input type="tel" id="telefone" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(11) 91234-5678" required>
+            </label>
+          </div>
+
+          <label class="campo">
+            <span>Procedimento de interesse</span>
+            <select id="procedimento" name="procedimento" required>
+              <option value="">Selecione um procedimento</option>
+            </select>
+          </label>
+
+          <div class="form__linha">
+            <label class="campo">
+              <span>Data preferida</span>
+              <input type="date" id="data" name="data">
+            </label>
+            <label class="campo">
+              <span>Horário preferido</span>
+              <input type="time" id="horario" name="horario" min="08:00" max="20:00">
+            </label>
+          </div>
+
+          <label class="campo">
+            <span>Alguma observação? (opcional)</span>
+            <textarea id="obs" name="obs" rows="2" placeholder="Ex.: primeira visita, gestante, pele sensível…"></textarea>
+          </label>
+
+          <button class="btn btn--whats" type="submit">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+            Enviar pelo WhatsApp
+          </button>
+          <p class="form__nota">Ao enviar, abriremos o WhatsApp com sua mensagem já preenchida. Nenhum dado é armazenado neste site.</p>
+        </form>
+      </div>
+
+      <div class="agenda__info reveal" data-delay="1">
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <div><strong>Endereço</strong><span data-config="endereco">Rua das Acácias, 128 — Sala 4<br>Jardim Paulista · São Paulo/SP</span></div>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          <div><strong>Horário de atendimento</strong><span data-config="horario">Segunda a sexta · 9h às 19h<br>Sábado · 9h às 14h</span></div>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+          <div><strong>WhatsApp</strong><span><a href="#" data-wa="Olá, Larissa! Gostaria de agendar um atendimento." target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">(11) 99999-9999</a><br>Resposta em horário comercial</span></div>
+        </div>
+        <a class="btn btn--primario" href="#" data-wa="Olá, Larissa! Gostaria de agendar um atendimento. Pode me ajudar com os horários disponíveis?" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+          Agendar atendimento
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTATO / MAPA
+     ============================================================ -->
+<section class="secao secao--branca contato" id="contato" aria-labelledby="contato-titulo">
+  <div class="container contato__grid">
+    <div class="reveal">
+      <span class="eyebrow">Contato</span>
+      <h2 class="titulo-secao" id="contato-titulo">Vamos nos <em>encontrar</em>?</h2>
+      <p class="subtitulo">Estamos em um endereço tranquilo, com estacionamento na rua e acesso por elevador. Se preferir, chame no WhatsApp que enviamos a localização exata.</p>
+
+      <div class="contato__dados">
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <div><strong>Endereço</strong><span data-config="endereco">Rua das Acácias, 128 — Sala 4<br>Jardim Paulista · São Paulo/SP</span></div>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          <div><strong>Horário</strong><span data-config="horario">Segunda a sexta · 9h às 19h<br>Sábado · 9h às 14h</span></div>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="15" rx="3"/><path d="m4 7 8 6 8-6"/></svg>
+          <div><strong>E-mail</strong><span>contato@larissasouzaestetica.com.br</span></div>
+        </div>
+      </div>
+
+      <div class="contato__social">
+        <a href="https://www.instagram.com/larissasouza.estetica" target="_blank" rel="noopener" data-social="instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+          Instagram
+        </a>
+        <a href="https://www.facebook.com/larissasouzaestetica" target="_blank" rel="noopener" data-social="facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.3-1.5 1.6-1.5h1.6V4.6c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.4H7.8V14h2.7v8h3z"/></svg>
+          Facebook
+        </a>
+      </div>
+    </div>
+
+    <div class="reveal" data-delay="1">
+      <div class="mapa" role="img" aria-label="Mapa ilustrativo com a localização da clínica no Jardim Paulista, São Paulo">
+        <!-- MAPA ILUSTRATIVO (SVG decorativo) — trocar por embed do Google Maps se desejar -->
+        <svg viewBox="0 0 600 420" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+          <rect width="600" height="420" fill="#EFE8D6"/>
+          <g stroke="#D8CDB4" stroke-width="2">
+            <path d="M0 90h600M0 230h600M0 340h600M120 0v420M300 0v420M470 0v420"/>
+          </g>
+          <g stroke="#F7F1E2" stroke-width="10">
+            <path d="M0 150C140 160 220 200 600 180M60 0v420"/>
+          </g>
+          <g fill="#E3E8D8">
+            <rect x="140" y="100" width="130" height="100" rx="6"/>
+            <rect x="330" y="250" width="120" height="70" rx="6"/>
+            <rect x="495" y="30" width="90" height="90" rx="6"/>
+            <rect x="20" y="250" width="80" height="70" rx="6"/>
+          </g>
+          <g fill="#DCE6D2" opacity="0.9">
+            <circle cx="500" cy="300" r="34"/>
+            <circle cx="520" cy="320" r="20"/>
+          </g>
+          <path d="M20 360C120 330 180 380 300 350s180-40 280-10" stroke="#CBDCC5" stroke-width="14" fill="none" opacity="0.8"/>
+          <g stroke="#C4912F" stroke-width="1" stroke-dasharray="4 6" opacity="0.55">
+            <path d="M300 200 300 60M300 200 120 200"/>
+          </g>
+        </svg>
+        <span class="mapa__pin" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-6.3 8-12.5A8 8 0 1 0 4 9.5C4 15.7 12 22 12 22z"/><circle cx="12" cy="9.5" r="3" fill="#FBF1DA"/></svg>
+        </span>
+        <div class="mapa__card">
+          <div><strong>Larissa Souza Estética</strong><span>Rua das Acácias, 128 — Sala 4</span></div>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+das+Ac%C3%A1cias+128+Jardim+Paulista+S%C3%A3o+Paulo" target="_blank" rel="noopener">Abrir no Maps</a>
+        </div>
+      </div>
+
+      <p style="font-size:.72rem;color:var(--marrom-suave);text-align:center;margin-top:10px;line-height:1.6">Endereço e mapa ilustrativos, usados apenas para demonstração.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     RODAPÉ
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <span class="footer__marca">Larissa Souza</span>
+    <p class="footer__sub">Estética Integrativa</p>
+    <p style="font-family:var(--fonte-titulo);font-style:italic;font-size:1rem;margin-top:12px;color:rgba(251,241,218,.85)">Aliado com o seu bem estar</p>
+
+    <nav class="footer__nav" aria-label="Navegação do rodapé">
+      <a href="#sobre">Sobre</a>
+      <a href="#catalogo">Procedimentos</a>
+      <a href="#quiz">Meu tratamento</a>
+      <a href="#kits">Kits</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#agendamento">Agendar</a>
+    </nav>
+
+    <div class="footer__social">
+      <a href="https://www.instagram.com/larissasouza.estetica" target="_blank" rel="noopener" aria-label="Instagram" data-social="instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.facebook.com/larissasouzaestetica" target="_blank" rel="noopener" aria-label="Facebook" data-social="facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.3-1.5 1.6-1.5h1.6V4.6c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.4H7.8V14h2.7v8h3z"/></svg>
+      </a>
+      <a href="#" target="_blank" rel="noopener" aria-label="WhatsApp" data-wa="Olá, Larissa! Vim pelo site e gostaria de mais informações.">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+      </a>
+    </div>
+
+    <p class="footer__legal">
+      © <span id="anoAtual">2026</span> Larissa Souza Estética Integrativa. Todos os direitos reservados.<br>
+      Conteúdo, imagens, nomes de clientes, endereço e resultados são ilustrativos e não substituem avaliação presencial. Procedimentos estéticos não substituem acompanhamento médico.
+    </p>
+    <a class="footer__topo" href="#inicio">Voltar ao topo ↑</a>
+  </div>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a class="whats-float" href="#" target="_blank" rel="noopener"
+   data-wa="Olá, Larissa! Vim pelo site e gostaria de agendar um atendimento."
+   aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+  <span class="whats-float__texto">Agendar no WhatsApp</span>
+</a>
+
+<script>
+/* ============================================================
+   CONFIGURAÇÃO — EDITE APENAS ESTE BLOCO
+   ============================================================ */
+const CONFIG = {
+  // WhatsApp com DDI + DDD, só números. Ex.: 5511999999999
+  whatsapp: "5511999999999",
+  whatsappExibicao: "(11) 99999-9999",
+  instagram: "https://www.instagram.com/larissasouza.estetica",
+  facebook: "https://www.facebook.com/larissasouzaestetica",
+  endereco: ["Rua das Acácias, 128 — Sala 4", "Jardim Paulista · São Paulo/SP"],
+  horario: ["Segunda a sexta · 9h às 19h", "Sábado · 9h às 14h"],
+  email: "contato@larissasouzaestetica.com.br",
+  // Link do mapa (Google Maps)
+  mapa: "https://www.google.com/maps/search/?api=1&query=Rua+das+Ac%C3%A1cias+128+Jardim+Paulista+S%C3%A3o+Paulo"
+};
+
+/* ============================================================
+   CATÁLOGO — nomes exatos do material da clínica
+   n = nome · d = descrição · b = benefícios · t = duração · tags
+   ============================================================ */
+const PROCEDIMENTOS = [
+  {
+    cat: "corpo",
+    titulo: "Estética Corporal",
+    itens: [
+      { n:"Modeladora", d:"Manobras firmes que desenham o contorno do corpo e ativam a circulação.", b:["Contorno corporal","Circulação","Pele mais firme"], t:"50 min", tags:"corpo maos" },
+      { n:"Massagem Detox", d:"Massagem profunda com óleos vegetais que ajudam o corpo a eliminar o que sobra.", b:["Sensação de leveza","Menos inchaço","Relaxamento profundo"], t:"60 min", tags:"corpo maos relaxar" },
+      { n:"Massagem Relaxante", d:"Toque lento e contínuo para soltar a tensão do dia e acalmar a mente.", b:["Relaxamento","Melhora do sono","Alívio da tensão"], t:"60 min", tags:"relaxar maos" },
+      { n:"Drenagem Linfática", d:"Movimentos suaves que favorecem a drenagem de líquidos e aliviam o inchaço.", b:["Pernas mais leves","Menos inchaço","Pós-operatório"], t:"60 min", tags:"corpo maos" },
+      { n:"Esculpe Detox", d:"Protocolo que une manobras modeladoras e ativos drenantes em uma só sessão.", b:["Medidas","Celulite","Inchaço"], t:"60 min", tags:"corpo maos" },
+      { n:"Lipoescultura Gessada", d:"Modelagem com faixas de gesso para potencializar o contorno após as manobras.", b:["Contorno","Firmeza","Definição"], t:"90 min", tags:"corpo maos" },
+      { n:"Microagulhamento", d:"Microperfurações controladas que estimulam a renovação da pele e o colágeno.", b:["Firmeza","Textura","Estrias e cicatrizes"], t:"60 min", tags:"corpo tecnologia rosto" },
+      { n:"Clareamento Íntimo", d:"Cuidado delicado para uniformizar o tom de áreas íntimas, com protocolo suave.", b:["Tom uniforme","Cuidado íntimo","Pele mais lisa"], t:"45 min", tags:"corpo tecnologia" },
+      { n:"Hidrolipoclasia", d:"Soro fisiológico e ultrassom em conjunto para tratar a gordura localizada.", b:["Gordura localizada","Contorno","Pele mais firme"], t:"60 min", tags:"corpo tecnologia" },
+      { n:"Manta Térmica", d:"Calor controlado que relaxa a musculatura e potencializa a sudorese.", b:["Relaxamento","Sensação de detox","Conforto"], t:"45 min", tags:"corpo relaxar maos" },
+      { n:"Criofrequência", d:"Frio e radiofrequência alternados no tratamento de flacidez e celulite.", b:["Flacidez","Celulite","Firmeza"], t:"50 min", tags:"corpo tecnologia" },
+      { n:"Criolipólise", d:"Resfriamento controlado da gordura localizada, com protocolo de segurança.", b:["Gordura localizada","Contorno","Sem cortes"], t:"70 min", tags:"corpo tecnologia" },
+      { n:"Pump up", d:"Ativos e massagem que promovem sensação de tônus e hidratação profunda.", b:["Tônus","Hidratação","Pele viçosa"], t:"50 min", tags:"corpo maos" },
+      { n:"Corrente Russa", d:"Estímulos elétricos suaves para trabalhar a musculatura e a firmeza.", b:["Firmeza","Tônus","Definição"], t:"45 min", tags:"corpo tecnologia" },
+      { n:"Striort", d:"Microagulhas com movimento rotacional para tratar estrias e cicatrizes.", b:["Estrias","Textura","Regeneração"], t:"60 min", tags:"corpo tecnologia rosto" },
+      { n:"Banho de Lua", d:"Ritual de hidratação intensa com luz baixa, aromas e toque tranquilo.", b:["Hidratação","Relaxamento","Pele luminosa"], t:"60 min", tags:"relaxar natureza" },
+      { n:"Biorressonância Quântica", d:"Leitura energética com equipamento que sugere pontos de equilíbrio do corpo.", b:["Equilíbrio","Bem-estar","Autoconhecimento"], t:"40 min", tags:"relaxar tecnologia" }
+    ]
+  },
+  {
+    cat: "facial",
+    titulo: "Estética Facial",
+    itens: [
+      { n:"Limpeza de Pele", d:"Extração cuidadosa, esfoliação e máscara calmante para renovar a pele.", b:["Pele limpa","Poros menos visíveis","Textura"], t:"60 min", tags:"rosto maos" },
+      { n:"Limpeza de Pele Vegana", d:"Versão com ativos vegetais, sem ingredientes de origem animal.", b:["Pele limpa","Ativos naturais","Textura"], t:"60 min", tags:"rosto natureza" },
+      { n:"Peeling Diamante", d:"Esfoliação com ponta de diamante que renova a superfície da pele.", b:["Renovação","Luminosidade","Textura"], t:"45 min", tags:"rosto tecnologia" },
+      { n:"Peeling Pele de Noiva", d:"Protocolo de renovação e luminosidade pensado para datas especiais.", b:["Luminosidade","Pele uniforme","Preparo para eventos"], t:"60 min", tags:"rosto tecnologia" },
+      { n:"Revitalização", d:"Hidratação profunda com ativos que devolvem viço e elasticidade.", b:["Viço","Hidratação","Elasticidade"], t:"50 min", tags:"rosto maos" },
+      { n:"Drenagem Facial", d:"Manobras suaves que reduzem o inchaço e definem o contorno do rosto.", b:["Menos inchaço","Contorno facial","Relaxamento"], t:"40 min", tags:"rosto maos" },
+      { n:"Lipo Sem Corte de Papada", d:"Protocolo não invasivo para o contorno da papada e da região do queixo.", b:["Contorno","Papada","Sem cortes"], t:"45 min", tags:"rosto tecnologia" },
+      { n:"Microagulhamento", d:"Estímulo de colágeno para firmeza, textura e marcas na pele do rosto.", b:["Firmeza","Textura","Marcas"], t:"60 min", tags:"rosto tecnologia" }
+    ]
+  },
+  {
+    cat: "terapias",
+    titulo: "Terapias",
+    itens: [
+      { n:"Sais de Banho", d:"Banho aromático com sais minerais que relaxa o corpo e amacia a pele.", b:["Relaxamento","Pele macia","Aroma terapêutico"], t:"30 min", tags:"relaxar natureza" },
+      { n:"Barra de Acsess", d:"Barras aplicadas em pontos de tensão para aliviar o peso do dia e equilibrar.", b:["Alívio de tensão","Equilíbrio","Sensação de leveza"], t:"40 min", tags:"relaxar natureza" },
+      { n:"SpaDetox", d:"Ritual completo com esfoliação, máscara de argila e massagem relaxante.", b:["Detox","Relaxamento profundo","Pele renovada"], t:"80 min", tags:"relaxar natureza" },
+      { n:"Reflexoterapia", d:"Estímulo de pontos nos pés que promove relaxamento e bem-estar geral.", b:["Relaxamento","Circulação","Bem-estar"], t:"45 min", tags:"relaxar maos" },
+      { n:"Argiloterapia", d:"Argilas minerais aplicadas na pele para limpeza, firmeza e revitalização.", b:["Limpeza","Firmeza","Revitalização"], t:"50 min", tags:"relaxar natureza" },
+      { n:"Crioterapia", d:"Aplicação de frio localizado para aliviar tensões e ativar a circulação.", b:["Alívio de tensão","Circulação","Recuperação"], t:"30 min", tags:"relaxar tecnologia" },
+      { n:"Terapia com Florais", d:"Escuta acolhedora com florais escolhidos para o seu momento emocional.", b:["Equilíbrio emocional","Acolhimento","Bem-estar"], t:"60 min", tags:"relaxar natureza" },
+      { n:"Cone Chinês", d:"Ritual de relaxamento profundo com estímulo de pontos e aromas suaves.", b:["Relaxamento","Sono melhor","Sensação de cuidado"], t:"45 min", tags:"relaxar natureza" }
+    ]
+  }
+];
+
+/* ============================================================
+   UTILITÁRIOS
+   ============================================================ */
+const $  = (sel, ctx = document) => ctx.querySelector(sel);
+const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+
+/** Monta um link de WhatsApp com mensagem pré-preenchida */
+function linkWhatsApp(mensagem) {
+  return `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(mensagem)}`;
+}
+
+const ICONE_CHEV = '<svg class="card-proc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
+const ICONE_RELOGIO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>';
+
+/* ============================================================
+   CONFIG APLICADA NA PÁGINA (links, endereço, horário)
+   ============================================================ */
+function aplicarConfig() {
+  $$('[data-social="instagram"]').forEach(a => { a.href = CONFIG.instagram; });
+  $$('[data-social="facebook"]').forEach(a => { a.href = CONFIG.facebook; });
+
+  $$('[data-config="endereco"]').forEach(el => { el.innerHTML = CONFIG.endereco.join('<br>'); });
+  $$('[data-config="horario"]').forEach(el => { el.innerHTML = CONFIG.horario.join('<br>'); });
+
+  // Todos os botões marcados com data-wa recebem o link com mensagem
+  $$('[data-wa]').forEach(el => { el.href = linkWhatsApp(el.dataset.wa); });
+
+  // Telefone exibido
+  $$('[data-wa]').forEach(el => {
+    if (/^\(\d{2}\)/.test(el.textContent.trim())) el.textContent = CONFIG.whatsappExibicao;
+  });
+
+  const ano = $('#anoAtual');
+  if (ano) ano.textContent = new Date().getFullYear();
+}
+
+/* ============================================================
+   HEADER, MENU MOBILE E NAVEGAÇÃO ATIVA
+   ============================================================ */
+function iniciarNavegacao() {
+  const header = $('#header');
+  const menuBtn = $('#menuBtn');
+  const menu = $('#menuMobile');
+
+  const aoRolar = () => header.classList.toggle('is-scrolled', window.scrollY > 24);
+  window.addEventListener('scroll', aoRolar, { passive: true });
+  aoRolar();
+
+  const fecharMenu = () => {
+    menu.classList.remove('aberto');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.setAttribute('aria-label', 'Abrir menu de navegação');
+  };
+
+  menuBtn.addEventListener('click', () => {
+    const aberto = menu.classList.toggle('aberto');
+    menuBtn.setAttribute('aria-expanded', String(aberto));
+    menuBtn.setAttribute('aria-label', aberto ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+  });
+
+  $$('a', menu).forEach(a => a.addEventListener('click', fecharMenu));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') fecharMenu(); });
+  window.addEventListener('resize', () => { if (window.innerWidth >= 860) fecharMenu(); });
+
+  // Destaque do link conforme a seção visível
+  const links = $$('.nav__link');
+  const secoes = links.map(l => $(l.getAttribute('href'))).filter(Boolean);
+  if ('IntersectionObserver' in window && secoes.length) {
+    const obs = new IntersectionObserver(entradas => {
+      entradas.forEach(entrada => {
+        if (!entrada.isIntersecting) return;
+        links.forEach(l => l.classList.toggle('ativo', l.getAttribute('href') === '#' + entrada.target.id));
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    secoes.forEach(s => obs.observe(s));
+  }
+}
+
+/* ============================================================
+   CATÁLOGO — TABS + CARDS QUE EXPANDEM
+   ============================================================ */
+function iniciarCatalogo() {
+  const painel = $('#painel-procedimentos');
+  const contagem = $('#catalogoContagem');
+  const tabs = $$('.tab');
+  let categoriaAtual = 'corpo';
+
+  function criarCard(item, indice, cat) {
+    const id = `proc-${cat}-${indice}`;
+    const numero = String(indice + 1).padStart(2, '0');
+    const mensagem = `Olá, Larissa! Tenho interesse no procedimento ${item.n}. Pode me contar mais e me passar os horários disponíveis?`;
+
+    const card = document.createElement('article');
+    card.className = 'card-proc';
+    card.innerHTML = `
+      <button class="card-proc__topo" type="button" aria-expanded="false" aria-controls="${id}">
+        <span class="card-proc__num" aria-hidden="true">${numero}</span>
+        <span class="card-proc__nome">${item.n}</span>
+        ${ICONE_CHEV}
+      </button>
+      <div class="card-proc__corpo" id="${id}">
+        <div>
+          <div class="card-proc__inner">
+            <p class="card-proc__desc">${item.d}</p>
+            <div class="card-proc__tags">${item.b.map(b => `<span class="tag">${b}</span>`).join('')}</div>
+            <div class="card-proc__info">
+              <span>${ICONE_RELOGIO} Duração estimada: ${item.t}</span>
+            </div>
+            <a class="btn btn--dourado card-proc__btn" href="${linkWhatsApp(mensagem)}" target="_blank" rel="noopener">
+              Agendar este procedimento
+            </a>
+          </div>
+        </div>
+      </div>`;
+
+    const topo = $('.card-proc__topo', card);
+    topo.addEventListener('click', () => {
+      const aberto = card.classList.toggle('aberto');
+      topo.setAttribute('aria-expanded', String(aberto));
+    });
+
+    return card;
+  }
+
+  function renderizar(cat) {
+    const grupo = PROCEDIMENTOS.find(g => g.cat === cat);
+    if (!grupo) return;
+    painel.innerHTML = '';
+    const frag = document.createDocumentFragment();
+    grupo.itens.forEach((item, i) => {
+      const card = criarCard(item, i, cat);
+      card.style.animationDelay = `${Math.min(i * 35, 350)}ms`;
+      frag.appendChild(card);
+    });
+    painel.appendChild(frag);
+    painel.setAttribute('aria-labelledby', 'tab-' + cat);
+    contagem.textContent = `${grupo.itens.length} procedimentos em ${grupo.titulo.toLowerCase()}`;
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      categoriaAtual = tab.dataset.categoria;
+      tabs.forEach(t => t.setAttribute('aria-selected', String(t === tab)));
+      renderizar(categoriaAtual);
+    });
+    // Navegação por setas entre as abas
+    tab.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      e.preventDefault();
+      const i = tabs.indexOf(tab);
+      const proximo = e.key === 'ArrowRight' ? (i + 1) % tabs.length : (i - 1 + tabs.length) % tabs.length;
+      tabs[proximo].focus();
+      tabs[proximo].click();
+    });
+  });
+
+  renderizar(categoriaAtual);
+}
+
+/* ============================================================
+   SELECT DO FORMULÁRIO E CARDÁPIO (a partir do catálogo)
+   ============================================================ */
+function montarSelectProcedimentos() {
+  const select = $('#procedimento');
+  if (!select) return;
+
+  PROCEDIMENTOS.forEach(grupo => {
+    const optgroup = document.createElement('optgroup');
+    optgroup.label = grupo.titulo;
+    grupo.itens.forEach(item => {
+      const opt = document.createElement('option');
+      opt.value = item.n;
+      opt.textContent = item.n;
+      optgroup.appendChild(opt);
+    });
+    select.appendChild(optgroup);
+  });
+}
+
+function montarCardapio() {
+  const alvo = $('#cardapioGrupos');
+  if (!alvo) return;
+
+  alvo.innerHTML = PROCEDIMENTOS.map(grupo => `
+    <div class="cardapio__grupo">
+      <h3>${grupo.titulo}</h3>
+      ${grupo.itens.map(item => `
+        <div class="cardapio__item">
+          <span class="nome">${item.n}</span>
+          <span class="pontos" aria-hidden="true"></span>
+          <span class="tempo">${item.t}</span>
+        </div>`).join('')}
+    </div>`).join('');
+}
+
+/* ============================================================
+   QUIZ — QUAL TRATAMENTO É IDEAL PARA MIM
+   ============================================================ */
+function iniciarQuiz() {
+  const passos = $$('.quiz__passo');
+  const bolinhas = $$('.quiz__bolinha');
+  const resultado = $('#quizResultado');
+  const btnVoltar = $('#quizVoltar');
+  const respostas = {};
+  let passoAtual = 0;
+
+  const minutos = t => parseInt(t, 10) || 60;
+
+  function atualizarProgresso() {
+    bolinhas.forEach((b, i) => {
+      b.classList.toggle('feita', i < passoAtual);
+      b.classList.toggle('atual', i === passoAtual);
+    });
+  }
+
+  function mostrarPasso(n) {
+    passoAtual = n;
+    passos.forEach((p, i) => p.classList.toggle('ativo', i === n));
+    resultado.classList.remove('ativo');
+    btnVoltar.hidden = n === 0;
+    atualizarProgresso();
+  }
+
+  /** Calcula as 3 melhores sugestões com base nas respostas */
+  function calcularSugestoes() {
+    const tempoFaixa = { curto: [0, 45], medio: [46, 70], longo: [71, 999] };
+    const faixa = tempoFaixa[respostas.tempo] || [0, 999];
+    const todos = PROCEDIMENTOS.flatMap(g => g.itens.map(i => ({ ...i, cat: g.cat })));
+
+    const pontuados = todos.map(item => {
+      let pontos = 0;
+      const tags = item.tags.split(' ');
+      if (tags.includes(respostas.objetivo)) pontos += 5;
+      if (tags.includes(respostas.preferencia)) pontos += 3;
+      const dur = minutos(item.t);
+      if (dur >= faixa[0] && dur <= faixa[1]) pontos += 2;
+      return { item, pontos };
+    });
+
+    const vistos = new Set();
+    return pontuados
+      .sort((a, b) => b.pontos - a.pontos)
+      .filter(({ item }) => {
+        if (vistos.has(item.n)) return false;
+        vistos.add(item.n);
+        return true;
+      })
+      .slice(0, 3);
+  }
+
+  function mostrarResultado() {
+    const sugestoes = calcularSugestoes();
+    const rotuloObjetivo = { corpo: 'cuidar do corpo', rosto: 'cuidar do rosto', relaxar: 'relaxar e desacelerar' }[respostas.objetivo];
+    const rotuloPreferencia = { maos: 'com as mãos', tecnologia: 'com tecnologia', natureza: 'com recursos naturais' }[respostas.preferencia];
+    const rotuloTempo = { curto: 'até 45 minutos', medio: 'cerca de 1 hora', longo: '1h30 ou mais' }[respostas.tempo];
+
+    passos.forEach(p => p.classList.remove('ativo'));
+    btnVoltar.hidden = true;
+    bolinhas.forEach(b => { b.classList.remove('atual'); b.classList.add('feita'); });
+
+    $('#quizResultadoTitulo').textContent = `Para ${rotuloObjetivo}, começamos por aqui`;
+    $('#quizResultadoTexto').textContent = `Você prefere um cuidado ${rotuloPreferencia} e tem ${rotuloTempo}. Estas são as sugestões que mais combinam com o seu momento — a confirmação vem na avaliação.`;
+
+    $('#quizSugestoes').innerHTML = sugestoes
+      .map(({ item }) => `<div class="quiz__sugestao"><span>${item.n}</span><span>${item.t}</span></div>`)
+      .join('');
+
+    const nomes = sugestoes.map(s => s.item.n).join(', ');
+    $('#quizWhats').href = linkWhatsApp(
+      `Olá, Larissa! Fiz o quiz do site e meu perfil ficou: ${rotuloObjetivo}, cuidado ${rotuloPreferencia}, tempo ${rotuloTempo}. As sugestões foram: ${nomes}. Gostaria de agendar uma avaliação.`
+    );
+
+    resultado.classList.add('ativo');
+    resultado.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  $$('.quiz__opcao').forEach(opcao => {
+    opcao.addEventListener('click', () => {
+      respostas[opcao.dataset.q] = opcao.dataset.v;
+      if (passoAtual < passos.length - 1) mostrarPasso(passoAtual + 1);
+      else mostrarResultado();
+    });
+  });
+
+  btnVoltar.addEventListener('click', () => mostrarPasso(Math.max(0, passoAtual - 1)));
+
+  $('#quizRefazer').addEventListener('click', () => {
+    Object.keys(respostas).forEach(k => delete respostas[k]);
+    mostrarPasso(0);
+  });
+
+  $('#quizVerCatalogo').addEventListener('click', () => {
+    $('#catalogo').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  atualizarProgresso();
+}
+
+/* ============================================================
+   COMPARADOR ANTES / DEPOIS
+   ============================================================ */
+function iniciarComparador() {
+  const range = $('#comparadorRange');
+  const depois = $('#imgDepois');
+  const alca = $('#comparadorAlca');
+  if (!range || !depois) return;
+
+  function atualizar(valor) {
+    const v = Number(valor);
+    depois.style.clipPath = `inset(0 0 0 ${v}%)`;
+    if (alca) alca.style.left = `${v}%`;
+    range.setAttribute('aria-valuetext', `${v}% antes, ${100 - v}% depois`);
+  }
+
+  range.addEventListener('input', e => atualizar(e.target.value));
+  atualizar(range.value);
+}
+
+/* ============================================================
+   CARROSSEL DE DEPOIMENTOS
+   ============================================================ */
+function iniciarDepoimentos() {
+  const trilha = $('#depoimentosTrilha');
+  const dots = $('#depDots');
+  const btnAntes = $('#depAntes');
+  const btnDepois = $('#depDepois');
+  if (!trilha) return;
+
+  const slides = $$('.depoimento', trilha);
+  let indice = 0;
+
+  function porTela() {
+    if (window.innerWidth >= 860) return 3;
+    if (window.innerWidth >= 600) return 2;
+    return 1;
+  }
+
+  function totalPaginas() {
+    return Math.max(1, slides.length - porTela() + 1);
+  }
+
+  function renderDots() {
+    dots.innerHTML = '';
+    for (let i = 0; i < totalPaginas(); i++) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', `Ir para o depoimento ${i + 1}`);
+      b.setAttribute('aria-current', String(i === indice));
+      b.addEventListener('click', () => irPara(i));
+      dots.appendChild(b);
+    }
+  }
+
+  function irPara(n) {
+    indice = (n + totalPaginas()) % totalPaginas();
+    trilha.style.transform = `translateX(${-(indice * (100 / porTela()))}%)`;
+    $$('button', dots).forEach((d, i) => d.setAttribute('aria-current', String(i === indice)));
+  }
+
+  btnAntes.addEventListener('click', () => irPara(indice - 1));
+  btnDepois.addEventListener('click', () => irPara(indice + 1));
+
+  // Swipe no mobile
+  let xInicial = null;
+  trilha.addEventListener('touchstart', e => { xInicial = e.touches[0].clientX; }, { passive: true });
+  trilha.addEventListener('touchend', e => {
+    if (xInicial === null) return;
+    const delta = e.changedTouches[0].clientX - xInicial;
+    if (Math.abs(delta) > 45) irPara(indice + (delta < 0 ? 1 : -1));
+    xInicial = null;
+  }, { passive: true });
+
+  // Autoplay suave (pausa ao interagir / respeita menos movimento)
+  const semMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let autoplay = null;
+  const iniciarAutoplay = () => { if (!semMovimento && !autoplay) autoplay = setInterval(() => irPara(indice + 1), 7000); };
+  const pararAutoplay = () => { clearInterval(autoplay); autoplay = null; };
+
+  ['mouseenter', 'focusin', 'touchstart'].forEach(ev => trilha.addEventListener(ev, pararAutoplay, { passive: true }));
+  ['mouseleave', 'focusout'].forEach(ev => trilha.addEventListener(ev, iniciarAutoplay));
+
+  let porTelaAtual = porTela();
+  window.addEventListener('resize', () => {
+    if (porTela() !== porTelaAtual) {
+      porTelaAtual = porTela();
+      indice = 0;
+      renderDots();
+    }
+    irPara(indice);
+  });
+
+  renderDots();
+  irPara(0);
+  iniciarAutoplay();
+}
+
+/* ============================================================
+   CONTADOR ANIMADO
+   ============================================================ */
+function iniciarContadores() {
+  const valores = $$('[data-contador]');
+  if (!valores.length) return;
+
+  function animar(el) {
+    const alvo = Number(el.dataset.contador);
+    const sufixo = el.dataset.sufixo || '';
+    const duracao = 1500;
+    const inicio = performance.now();
+
+    function passo(agora) {
+      const progresso = Math.min((agora - inicio) / duracao, 1);
+      const suave = 1 - Math.pow(1 - progresso, 3);
+      el.textContent = Math.round(alvo * suave).toLocaleString('pt-BR') + sufixo;
+      if (progresso < 1) requestAnimationFrame(passo);
+    }
+    requestAnimationFrame(passo);
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    valores.forEach(el => {
+      el.textContent = Number(el.dataset.contador).toLocaleString('pt-BR') + (el.dataset.sufixo || '');
+    });
+    return;
+  }
+
+  const obs = new IntersectionObserver((entradas, observer) => {
+    entradas.forEach(entrada => {
+      if (entrada.isIntersecting) {
+        animar(entrada.target);
+        observer.unobserve(entrada.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  valores.forEach(el => obs.observe(el));
+}
+
+/* ============================================================
+   REVELAÇÃO AO ROLAR + PARALLAX LEVE
+   ============================================================ */
+function iniciarAnimacoes() {
+  const elementos = $$('.reveal');
+  const semMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (semMovimento || !('IntersectionObserver' in window)) {
+    elementos.forEach(el => el.classList.add('is-visible'));
+  } else {
+    const obs = new IntersectionObserver((entradas, observer) => {
+      entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('is-visible');
+          observer.unobserve(entrada.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    elementos.forEach(el => obs.observe(el));
+  }
+
+  // Parallax suave nos ornamentos do hero
+  const arte = $$('.hero__art, .hero__silhueta, .hero__circulo-verde');
+  if (semMovimento || !arte.length) return;
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const y = Math.min(window.scrollY, 700);
+      if (y < 760) {
+        arte.forEach((el, i) => {
+          const deslocamento = y * 0.04 * (i % 2 ? -1 : 1);
+          // A arte centralizada usa translateX(-50%) no CSS
+          el.style.transform = el.classList.contains('hero__art')
+            ? `translate(-50%, ${deslocamento}px)`
+            : `translate3d(0, ${deslocamento}px, 0)`;
+        });
+      }
+      ticking = false;
+    });
+  }, { passive: true });
+}
+
+/* ============================================================
+   FORMULÁRIO DE AGENDAMENTO → WHATSAPP
+   ============================================================ */
+function iniciarFormulario() {
+  const form = $('#formAgendamento');
+  if (!form) return;
+
+  const nome = $('#nome');
+  const telefone = $('#telefone');
+  const procedimento = $('#procedimento');
+  const data = $('#data');
+  const horario = $('#horario');
+  const obs = $('#obs');
+
+  // Máscara simples de telefone: (11) 91234-5678
+  telefone.addEventListener('input', e => {
+    let v = e.target.value.replace(/\D/g, '').slice(0, 11);
+    if (v.length > 10)     v = v.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+    else if (v.length > 6) v = v.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+    else if (v.length > 2) v = v.replace(/(\d{2})(\d{0,5})/, '($1) $2');
+    else if (v.length > 0) v = v.replace(/(\d{0,2})/, '($1');
+    e.target.value = v;
+  });
+
+  // Impede datas passadas
+  data.min = new Date().toISOString().split('T')[0];
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    if (!nome.value.trim() || !telefone.value.trim() || !procedimento.value) {
+      [nome, telefone, procedimento].forEach(campo => {
+        if (!campo.value.trim()) campo.setAttribute('aria-invalid', 'true');
+        else campo.removeAttribute('aria-invalid');
+      });
+      form.reportValidity();
+      (!nome.value.trim() ? nome : !telefone.value.trim() ? telefone : procedimento).focus();
+      return;
+    }
+
+    const dataFormatada = data.value ? data.value.split('-').reverse().join('/') : 'a combinar';
+    const linhas = [
+      'Olá, Larissa! Gostaria de agendar um atendimento.',
+      '',
+      `Nome: ${nome.value.trim()}`,
+      `Telefone: ${telefone.value.trim()}`,
+      `Procedimento: ${procedimento.value}`,
+      `Data preferida: ${dataFormatada}`,
+      `Horário preferido: ${horario.value || 'a combinar'}`
+    ];
+    if (obs.value.trim()) linhas.push(`Observação: ${obs.value.trim()}`);
+
+    window.open(linkWhatsApp(linhas.join('\n')), '_blank', 'noopener');
+  });
+
+  [nome, telefone, procedimento].forEach(campo => {
+    campo.addEventListener('input', () => campo.removeAttribute('aria-invalid'));
+  });
+}
+
+/* ============================================================
+   INICIALIZAÇÃO GERAL
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+  aplicarConfig();
+  iniciarNavegacao();
+  iniciarCatalogo();
+  montarSelectProcedimentos();
+  montarCardapio();
+  iniciarQuiz();
+  iniciarComparador();
+  iniciarDepoimentos();
+  iniciarContadores();
+  iniciarAnimacoes();
+  iniciarFormulario();
+});
+</script>
+</body>
+</html>
